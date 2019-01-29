@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build"
+    "dev": "vuepress dev page",
+    "build": "vuepress build page"
   },
   "author": "",
   "license": "ISC",
