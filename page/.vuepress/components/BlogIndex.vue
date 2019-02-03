@@ -18,7 +18,6 @@
 export default {
     computed: {
         posts() {
-            window.someobjct = this
             return this.$site.pages
                 .filter(x => x.path.startsWith('/post/') && !x.frontmatter.blog_index)
                 .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
