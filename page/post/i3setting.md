@@ -10,8 +10,8 @@ sudo apt install vim
 ## i3 Window Managerのインストール
 
 ```terminal
-sudo apt update
-sudo apt install i3
+sudo apt-get update
+sudo apt-get install i3
 ```
 
 このあとPCの**再起動**をかける。ログイン画面にある歯車マークをクリックしたときに、`i3`と表示されていれば成功。
@@ -53,7 +53,7 @@ fcitx-config-gtk3
 個人的に`gdebi`はよく使うのでおすすめしておく。`dpkg`よりも優秀で、依存関係にあるものをすべて持ってきてくれる。確か、GUIにも対応している。
 
 ```ruby:terminal
-sudo apt install gdebi
+sudo apt-get install gdebi
 ```
 
 実行の仕方は
