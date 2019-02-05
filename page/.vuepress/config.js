@@ -7,6 +7,8 @@ const google_analytics = () => {
     gtag('config', 'UA-103597604-2');` ]]
 }
 
+const domain = "students-tech.blog"
+
 module.exports = {
     title: "学生たちの技術ブログ",
     themeConfig: {
@@ -15,7 +17,7 @@ module.exports = {
             { text: "Posts", link: "/post/" }
         ],
         sidebar: "auto",
-        domain: "students-tech.blog"
+        domain
     },
     markdown: {
         extendMarkdown: md => {
@@ -41,6 +43,9 @@ module.exports = {
             // image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
             publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
             modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+        },
+        "sitemap": {
+            hostname: "https://" + domain
         }
     }
 }
