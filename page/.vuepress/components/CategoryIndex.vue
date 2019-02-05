@@ -32,7 +32,7 @@ export default {
         postsInCategory () {
             return this.posts
                 .filter(x => x.frontmatter.category !== undefined)
-                //.filter(x => x.frontmatter.category.toLocaleLowerCase() === this.categoryName)
+                .filter(x => x.frontmatter.category.toLocaleLowerCase() === this.categoryName)
         },
         posts() {
             return this.$site.pages
