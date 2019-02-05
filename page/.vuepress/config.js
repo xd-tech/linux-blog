@@ -14,7 +14,8 @@ module.exports = {
             { text: "Home", link: "/" },
             { text: "Posts", link: "/post/" }
         ],
-        sidebar: "auto"
+        sidebar: "auto",
+        domain: "students-tech.blog"
     },
     markdown: {
         extendMarkdown: md => {
@@ -26,5 +27,20 @@ module.exports = {
     },
     head:[
         ...google_analytics()
-    ]
+    ],
+    plugins: {
+        "seo": {
+            siteTitle: (_, $site) => $site.title,
+            title: $page => $page.frontmatter.title || $page.title,
+            description: $page => $page.frontmatter.description,
+            // author: (_, $site) => $site.themeConfig.author,
+            // tags: $page => $page.frontmatter.tags,
+            // twitterCard: _ => 'summary_large_image',
+            type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+            url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
+            // image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
+            publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
+            modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+        }
+    }
 }
