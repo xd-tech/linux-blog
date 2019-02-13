@@ -1,4 +1,14 @@
-# i3wmをUbuntuで使ってみよう
+---
+title: i3wmをUbuntuで使ってみよう
+description: i3wmを使うのが怖い？ばっかお前...
+date: 2019-2-14
+category: linux
+author: AstPy_ms
+tag:
+- Ubuntu
+- i3wm
+---
+
 ## はじめにインストールしておくコマンドたち
 
 今回は`vim`を使う。
