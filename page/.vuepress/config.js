@@ -1,20 +1,43 @@
 const google_analytics = () => {
-    return [["script", {async:true, src:"https://www.googletagmanager.com/gtag/js?id=UA-103597604-2"}],
-    ["script",{},`window.dataLayer = window.dataLayer || [];
+    return [
+        ["script", {
+            async: true,
+            src: "https://www.googletagmanager.com/gtag/js?id=UA-103597604-2"
+        }],
+        ["script", {}, `window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
   
-    gtag('config', 'UA-103597604-2');` ]]
+    gtag('config', 'UA-103597604-2');`]
+    ]
 }
 
+const google_adsense = () => {
+    return [
+        ["script", {
+            "async": true,
+            src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        }],
+        ["script", {}, `
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1395471808093411",
+            enable_page_level_ads: true
+        });`]
+    ]
+}
 const domain = "students-tech.blog"
 
 module.exports = {
     title: "学生たちの技術ブログ",
     themeConfig: {
-        nav: [
-            { text: "Home", link: "/" },
-            { text: "Posts", link: "/post/" }
+        nav: [{
+                text: "Home",
+                link: "/"
+            },
+            {
+                text: "Posts",
+                link: "/post/"
+            }
         ],
         sidebar: "auto",
         domain
@@ -27,8 +50,9 @@ module.exports = {
             })
         }
     },
-    head:[
-        ...google_analytics()
+    head: [
+        ...google_analytics(),
+        ...google_adsense()
     ],
     plugins: {
         "seo": {
