@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/82b06f1b-59f6-4a77-9741-f5983e94ad10/deploy-status)](https://app.netlify.com/sites/students-tech-blog/deploys)
+
 # Linux のブログを書こうかなと思っているところ
 
 ## 実行方法
