@@ -10,7 +10,7 @@ tag:
 
 ## Font Ligatureとは
 Font Ligature(合字)はこの写真がわかりやすいです。(`Dejavu Sans`というフォントです)
-![Dejavu Sans Code Samples](./imgs/fontligature.png)
+![Dejavu Sans Code Samples](https://raw.githubusercontent.com/SSNikolaevich/DejaVuSansCode/master/sample.png)
 左が普通のフォントで、右がFont Ligatureのフォントです。
 
 [Wikiによると](https://ja.wikipedia.org/wiki/%E5%90%88%E5%AD%97)Font Ligatureというのは、 **複数の文字を合成して一文字にしたもの** という意味らしいです
