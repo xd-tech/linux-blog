@@ -52,7 +52,7 @@ export default {
       return this.$site.pages
         .filter(x => x.frontmatter.tag !== undefined)
         .map(x => x.frontmatter.tag)
-        .flat()
+        .reduce((a, x) => a.concat(x), [])
         .reduce((a, x) => {
           if (!a.includes(x)) a.push(x);
           return a;
