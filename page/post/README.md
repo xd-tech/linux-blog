@@ -4,6 +4,7 @@ sidebar: false
 ---
 # 記事一覧
 
--> [カテゴリ別に探す](/post/category/)
+-> [カテゴリから探す](/post/search/by-category.html)
+-> [タグから探す](/post/search/by-tag.html)
 
 <BlogIndex />
