@@ -65,16 +65,6 @@ tag:
 
 ## .configに追加する系
 
-### Mod+Shift+Eを豪華に
-
-```ruby: ~/.config/i3/config
-bindsym $mod+Shift+e exec --no-startup-id \
-"i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot' -b 'Logout' 'i3-msg exit'"
-```
-`exit i3?`だけだったのを`Shutdown`,`Reboot`,`Logout`の3つに増やします
-
-これはconfig内のどこにでも追加してOK
-
 ### 壁紙を設定する
 
 ```ruby: ~/.config/i3/config
@@ -96,14 +86,28 @@ bindsym mod1+s exec gnome-screenshot --window
 
 これはconfig内のどこにでも追加してOK
 
+### Mod+Shift+Eを豪華に
+
+```ruby: ~/.config/i3/config
+bindsym $mod+Shift+e exec --no-startup-id \
+"i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot' -b 'Logout' 'i3-msg exit'"
+```
+`exit i3?`だけだったのを`Shutdown`,`Reboot`,`Logout`の3つに増やします
+
+これはもともとあったキーバインドのところと置き換えて使います。おそらく`bindsym $mod+Shift+e`の行があるのでそこと置き換えます
+
 ### Mod+dをdmenuからi3-dmenu-desktopに変える
 
 ```ruby: ~/.config/i3/config
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 ```
 
-これだけはdmenuを開くキーバインドのところと置き換えて使います。おそらく`bindsym $mod+d exec --no-startup-id dmenu`みたいな行があるのでそこと置き換えます
+これもdmenuを開くキーバインドのところと置き換えて使います。おそらく`bindsym $mod+d exec --no-startup-id dmenu`みたいな行があるのでそこと置き換えます
 
 ## 終わりに
 
 これでi3wmマスターへ一歩近づけました。i3wmのインストールは[こちら](https://students-tech.blog/post/i3setting.html)
+
+## 参考文献
+- https://qiita.com/gyu-don/items/d61b03e0222a7f1ce9f7
+- https://i3wm.org/docs/refcard.html
