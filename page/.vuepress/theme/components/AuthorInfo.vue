@@ -40,20 +40,23 @@ export default {
 <style lang="css" scoped>
 .info-container {
   display: flex;
-  align-items: center;
+  align-items:center;
   margin: 20px;
   background-color: rgba(200, 200, 200, 0.5);
   border-radius: 10px;
 }
+
+.info-texts {
+  text-align: left;
+  word-break: break-all;
+  border: none;
+  padding: 5px;
+}
+
 #profileimg {
   height: 5em;
   border-radius: 100%;
   padding: 10px;
-}
-.info-texts {
-  text-align: left;
-  overflow:scroll;
-  word-break: break-all;
 }
 
 #username {

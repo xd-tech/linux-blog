@@ -1,7 +1,7 @@
 export default {
   username: "pineapplehunter",
   name: "Pineapplehunter",
-  bio: "some bio, more ",
+  bio: "Linux好きの人です。",
   pic: "/imgs/pineapplehunter.png",
   infoPageUrl: "#"
 }
