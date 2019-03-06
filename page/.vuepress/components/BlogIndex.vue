@@ -22,7 +22,7 @@ export default {
     posts() {
       return this.$site.pages
         .filter(
-          x => x.path.match(/^\/post\/.*\.html$/gi) && !x.frontmatter.blog_index
+          x => x.path.match(/^\/post\/[^\/]*\.html$/gi) && !x.frontmatter.blog_index
         )
         .sort(
           (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)

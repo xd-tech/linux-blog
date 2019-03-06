@@ -4,6 +4,8 @@
 
     <Content/>
 
+    <AuthorInfo />
+
     <footer class="page-edit">
       <div
         class="edit-link"
@@ -63,6 +65,7 @@
 
 <script>
 import { resolvePage, normalize, outboundRE, endingSlashRE } from '../util'
+import AuthorInfo from '../components/AuthorInfo'
 
 export default {
   props: ['sidebarItems'],
@@ -133,9 +136,11 @@ export default {
         || this.$site.themeConfig.editLinkText
         || `Edit this page`
       )
-    }
+    },
   },
-
+  components: {
+    AuthorInfo
+  },
   methods: {
     createEditLink (repo, docsRepo, docsDir, docsBranch, path) {
       const bitbucket = /bitbucket.org/
