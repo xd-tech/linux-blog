@@ -2,6 +2,7 @@
 title: Font Ligatureでエディタのフォントをかっこよくする
 description: Font Ligatureという特殊フォントを使い、'==='や'=>'などの記号を見やすくします
 date: 2019-02-27
+author: pineapplehunter
 category: editor
 tag:
   - font
