@@ -25,7 +25,11 @@ export default {
           x => x.path.match(/^\/post\/[^\/]*\.html$/gi) && !x.frontmatter.blog_index
         )
         .sort(
-          (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+          (a, b) => {
+            let adate = a.frontmatter.date || "2019-1-1"
+            let bdate = b.frontmatter.date || "2018-1-1"
+            return new Date(bdate) - new Date(adate) > 0
+          }
         );
     }
   }
