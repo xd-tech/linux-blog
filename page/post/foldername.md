@@ -5,7 +5,7 @@ date: 2019-4-3
 category: linux
 author: AstPy_ms
 tag:
-- ubuntu
+- Ubuntu
 ---
 
 ## こんなことありませんか？

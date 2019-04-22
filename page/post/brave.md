@@ -5,7 +5,7 @@ category: application
 author: AstPy_ms
 date: 2019-3-10
 tag:
-- ubuntu
+- Ubuntu
 ---
 
 ## Braveって何？
