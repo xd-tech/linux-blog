@@ -52,6 +52,7 @@ export default {
       return this.$site.pages
         .filter(x => x.frontmatter.category !== undefined)
         .map(x => x.frontmatter.category)
+        .filter(x => x != "")
         .reduce((a, x) => {
           if (!a.includes(x)) a.push(x);
           return a;

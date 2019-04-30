@@ -3,7 +3,7 @@ title: SystemdでLinuxのスクリプトを起動時に実行する
 description: Systemdを利用してLinuxでスクリプトろ自動実行する方法を解説します。
 date: 2019-3-6
 author: pineapplehunter
-category:
+category: linux
 ---
 # Systemdで起動時にスクリプトを実行する
 ## 自動起動について
