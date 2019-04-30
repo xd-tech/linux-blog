@@ -30,9 +30,6 @@ export default {
         .authors
         .filter(x => x.username === this.authorName)[0]
     }
-  },
-  created () {
-    console.log(this.authorName)
   }
 }
 </script>

@@ -28,7 +28,7 @@ export default {
           (a, b) => {
             let adate = a.frontmatter.date || "2019-1-1"
             let bdate = b.frontmatter.date || "2018-1-1"
-            return new Date(bdate) - new Date(adate) > 0
+            return new Date(bdate) - new Date(adate)
           }
         );
     }
