@@ -53,11 +53,12 @@ export default {
         .filter(x => x.frontmatter.tag !== undefined)
         .map(x => x.frontmatter.tag)
         .reduce((a, x) => a.concat(x), [])
+        .filter(x => x != "")
+        .map(x => x.toLowerCase())
         .reduce((a, x) => {
           if (!a.includes(x)) a.push(x);
           return a;
         }, [])
-        .map(x => x.toLowerCase())
         .sort((a,b) => a > b);
     }
   }
