@@ -44,7 +44,7 @@ extendedと書いてあるように、**FAT**というフォーマットを**拡
 
 ### ext4 (fourth extended file system)
 
-これはLinuxで使われているフォーマットです。Windowsが**NTFS**でインストールされるのに対し、Linuxは**ext4**でインストールされます。要するLinux用です
+これはLinuxで使われているフォーマットです。Windowsが**NTFS**でインストールされるのに対し、Linuxは**ext4**でインストールされます。要するにLinux用です
 
 ## 最後に
 
