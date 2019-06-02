@@ -53,7 +53,7 @@ $ sudo apt-get install lubuntu-desktop
 
 各々インストールしたあとは`sudo reboot`してくださいね。
 
-ちょっとやばい[i3wm](https://i3wm.org/)をインストールしたい人は[こちら](https://students-tech.blog/post/customize_distro.html)
+ちょっとやばい[i3wm](https://i3wm.org/)をインストールしたい人は[こちら](https://students-tech.blog/post/i3setting.html)
 
 ## Rebootしたあとは
 
