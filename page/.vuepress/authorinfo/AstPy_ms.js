@@ -1,7 +1,7 @@
 export default {
   username: "AstPy_ms",
   name: "AstPy_ms",
-  bio: "このブログの音ゲーマー部門部長兼Linuxにわか部門名誉部長です",
+  bio: "首都大在籍のLいろいろ斜め上な人です。",
   pic: "/imgs/astpy.jpg",
   infoPageUrl: "#"
 }
