@@ -6,6 +6,7 @@ category: other
 author: AstPy_ms
 tag:
 - useful
+- campuslife
 ---
 
 ## 自炊？コンビニ？外食？
