@@ -54,6 +54,12 @@ export function isActive (route, path) {
 }
 
 export function resolvePage (pages, rawPath, base) {
+  if (isExternal(rawPath)) {
+    return {
+      type: 'external',
+      path: rawPath
+    }
+  }
   if (base) {
     rawPath = resolvePath(rawPath, base)
   }
@@ -192,7 +198,7 @@ export function resolveMatchingConfig (regularPath, config) {
     }
   }
   for (const base in config) {
-    if (ensureEndingSlash(regularPath).indexOf(base) === 0) {
+    if (ensureEndingSlash(regularPath).indexOf(encodeURI(base)) === 0) {
       return {
         base,
         config: config[base]
@@ -222,6 +228,11 @@ function resolveItem (item, pages, base, groupDepth = 1) {
       )
     }
     const children = item.children || []
+    if (children.length === 0 && item.path) {
+      return Object.assign(resolvePage(pages, item.path, base), {
+        title: item.title
+      })
+    }
     return {
       type: 'group',
       path: item.path,
