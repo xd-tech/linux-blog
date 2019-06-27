@@ -55,7 +55,7 @@
 
 <script>
 import { isActive } from '../util'
-import DropdownTransition from './DropdownTransition.vue'
+import DropdownTransition from '@theme/components/DropdownTransition.vue'
 
 export default {
   name: 'SidebarGroup',
@@ -97,7 +97,7 @@ export default {
       border-left none
 
 .sidebar-heading
-  color #999
+  color $textColor
   transition color .15s ease
   cursor pointer
   font-size 1.1em

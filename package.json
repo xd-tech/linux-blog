@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.47",
+    "vuepress": "^1.0.2",
     "vuepress-plugin-seo": "^0.1.2",
-    "vuepress-plugin-sitemap": "^2.1.1"
+    "vuepress-plugin-sitemap": "^2.1.2"
   }
 }
