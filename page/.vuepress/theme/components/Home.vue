@@ -24,6 +24,9 @@
       </p>
     </header>
 
+    <h1 class="saikin">最近の記事</h1>
+    <Top5 />
+
     <div
       class="features"
       v-if="data.features && data.features.length"
@@ -159,4 +162,8 @@ export default {
     .feature
       h2
         font-size 1.25rem
+
+.saikin
+  padding-top 20px
+  text-align center
 </style>
