@@ -40,7 +40,7 @@ $ git config --global user.email "youraddress@gmail.com"
 
 **上に一般的に書いたコマンド、下にそれを使った例を書いておきます。**
 
-### github等のサイトからダウンロード
+### 1-1. github等のサイトからダウンロード
 
 ```
 $ git clone [gitファイルが管理されているサイトのURL]
@@ -48,6 +48,26 @@ $ git clone https://github.com/xd-tech/linux-blog
 ```
 
 これは単純にgithub等のサイトからファイルをダウンロードしてくるだけです。これならgithubのページに行ってzipでダウンロードして解凍してもOKです。
+
+### 2-2. 自分でレポジトリを作る
+
+予め[github](https://github.com)でアカウントを作り、レポジトリを作成します。
+
+作成するまでは[こちら](https://techacademy.jp/magazine/6235)がわかりやすいです。
+
+作成したあとは、
+
+```
+$ mkdir [name]
+$ mkdir test
+
+$ cd [さっき作ったディレクトリの名前]
+$ cd test
+
+$ git init
+```
+
+これで次に進みます。
 
 ### ブランチを増やす(任意)
 
@@ -76,7 +96,7 @@ $ git branch foo
 
 # ここで開発開始！！！
 
-### 加えた変更をGitに保存する
+### 2-1. 加えた変更をGitに保存する
 
 ここでは詳しい説明はしません。なぜかというと**私もよくわかっていないので。**(逆に言うとわかってなくても使える)
 
@@ -92,7 +112,14 @@ $ git commit -m "アップデートしました"
 
 これで保存完了。ただし、この状態だとローカルレポジトリでしか反映されていないので、cloneしてきたサイト(リモートレポジトリ)に反映させます。
 
-### リモートレポジトリに保存
+### 2-2. 自分でレポジトリを用意した場合のみ...
+
+```
+$ git remote add origin [先程作ったレポジトリのURL]
+$ git remote add origin https://github.com\xd-tech/linux-blog
+```
+
+### 3. リモートレポジトリに保存
 
 fooというブランチで開発をしたとすると、
 
