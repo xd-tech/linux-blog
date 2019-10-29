@@ -5,7 +5,7 @@
     <Content class="theme-default-content"/>
 
     <ShareButton />
-    
+
     <AuthorInfo />
 
     <footer class="page-edit">
