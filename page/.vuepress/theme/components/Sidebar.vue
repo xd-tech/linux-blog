@@ -10,11 +10,12 @@
 <script>
 import SidebarLinks from '@theme/components/SidebarLinks.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
+import ShareButton from "./ShareButton"
 
 export default {
   name: 'Sidebar',
 
-  components: { SidebarLinks, NavLinks },
+  components: { SidebarLinks, NavLinks, ShareButton },
 
   props: ['items']
 }
