@@ -4,6 +4,8 @@
 
     <Content class="theme-default-content"/>
 
+    <ShareButton />
+    
     <AuthorInfo />
 
     <footer class="page-edit">
@@ -66,6 +68,7 @@
 <script>
 import { resolvePage, outboundRE, endingSlashRE } from '../util'
 import AuthorInfo from '../components/AuthorInfo'
+import ShareButton from "../components/ShareButton"
 
 export default {
   props: ['sidebarItems'],
@@ -133,7 +136,8 @@ export default {
     }
   },
   components: {
-    AuthorInfo
+    AuthorInfo,
+    ShareButton
   },
   methods: {
     createEditLink (repo, docsRepo, docsDir, docsBranch, path) {
