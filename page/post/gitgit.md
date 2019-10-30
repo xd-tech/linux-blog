@@ -125,7 +125,7 @@ $ git commit -m "アップデートしました"
 
 ```
 $ git remote add origin [先程作ったレポジトリのURL]
-$ git remote add origin https://github.com\xd-tech/linux-blog
+$ git remote add origin https://github.com/xd-tech/linux-blog
 ```
 
 ### 3. リモートレポジトリに保存
