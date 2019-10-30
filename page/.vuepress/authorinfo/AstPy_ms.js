@@ -1,7 +1,7 @@
 export default {
   username: "AstPy_ms",
   name: "AstPy_ms",
-  bio: "首都大在籍のLいろいろ斜め上な人です。",
+  bio: "東京都立大学でいろいろやってる人です。Twitterやってます。",
   pic: "/imgs/astpy.jpg",
   infoPageUrl: "#"
 }
