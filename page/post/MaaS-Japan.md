@@ -5,6 +5,7 @@ date: 2019-10-31
 category: other
 author: AstPy_ms
 tag:
+- useful
 ---
 
 ## MaaS Japan って何？
