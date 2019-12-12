@@ -33,14 +33,51 @@ MacにはXcodeをインストールすると、自動的にデフォルトのコ
 $ brew update
 $ brew upgrade
 # インストール
-$ brew llvm --with-toolchain
+$ brew install llvm
+```
+これでインストールは完了ですが、このままパスに追加するとでは標準で入っているClangと干渉してしまうため、自分でパスを通す必要があります。
 
+### パスを通す
+次のように`~/.profile`に次のコードを追加することで使用するときだけ新しいClangが使えるようになります。
+```bash
+function llvm (){
+    export PATH="/usr/local/opt/llvm/bin:$PATH"
+    export LDFLAGS="-L/usr/local/opt/llvm/lib"
+    export CPPFLAGS="-I/usr/local/opt/llvm/include"
+    unset -f llvm
+}
+```
+書き込んだあと、**パソコンの再起動**し、clangのバージョンを調べてみると次のようになります。
+```bash
+$ clang -v
+Apple clang version 11.0.0 (clang-1100.0.33.8)
+Target: x86_64-apple-darwin19.0.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+```
+そうです。新しいものにアップデート**されていません**。ここが重要です。`llvm`というコマンドを打って初めて最新版のClangが使えるようになります。
+```bash
+$ llvm
+$ clang -v
+clang version 9.0.0 (tags/RELEASE_900/final)
+Target: x86_64-apple-darwin19.0.0
+Thread model: posix
+InstalledDir: /usr/local/opt/llvm/bin
+```
+`llvm`コマンドを打つ動作はターミナルを開くたびに毎回行う必要があります。
+
+::: tip
+ターミナルを開いたときに自動的に最新のClangをパスに通すこともできますが、Xcode等古いClangで動いていたプログラムがうまく動かなくなる可能性があるので、使うときだけパスに通すようにすることをおすすめします。
+:::
+
+```bash
 # 動作テスト
+$ llvm
 $ clang
-clang-9: error: no input files。
+clang-9: error: no input files
 ```
 
-これでインストールは完了です。
+これでパスを通す作業は完了です。
 
 ## Windows
 Windowsではコマンドライン上からインストールする簡単な方法はありませんがLLVMの公式サイトからビルド済みのバイナリをダウンロードできます。
