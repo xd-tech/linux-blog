@@ -31,7 +31,7 @@ MacにはXcodeをインストールすると、自動的にデフォルトのコ
 ```bash
 # アップデート
 $ brew update
-$ brew upgrade
+$ brew upgradeupdate
 # インストール
 $ brew install llvm
 ```
@@ -102,7 +102,7 @@ clang: error: no input files
 Ubuntuでの例だとこうです。
 
 ```bash
-$ apt install clang
+$ sudo apt install clang
 ```
 パッケージ名が若干違ったりインストーラが違ったりするとは思いますがそこは適宜調整してインストールしてください。
 
