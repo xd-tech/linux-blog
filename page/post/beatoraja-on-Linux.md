@@ -20,7 +20,8 @@ tag:
 ## 動作確認環境
 
 - Ubuntu 19.10
-
+- PS2toUSBコンバータ ( JC-PS101USV )
+- PS2公式IIDXコントローラ ( 専コン )
 
 ## Javaをインストール
 
@@ -81,3 +82,81 @@ $ unrar x [GENOCIDEファイル]
 $ cd ~/ダウンロード
 $ unrar x GENOSIDE2018_SP.rar
 ```
+
+そうすると`[package]`みたいなフォルダが生成されると思います。
+
+
+## beatorajaの初期設定
+
+まずはbeatorajaのconfigを起動させます。
+
+```
+$ cd [beatorajaがある場所]/beatoraja0.7.6
+$ chmod +x beatoraja-config.command
+$ ./beatoraja-config.command
+```
+
+するとこんなのが出てきます。
+
+![](../.vuepress/public/imgs/beatoraja2.png)
+
+
+### 楽曲パックを読み込ませる
+
+`リソース`タブの`+`を押して、楽曲パックがある場所を選択し、`開く`ボタンを押します。
+
+![](../.vuepress/public/imgs/beatoraja3.png)
+![](../.vuepress/public/imgs/beatoraja4.png)
+![](../.vuepress/public/imgs/beatoraja5.png)
+
+
+### FAST / SLOW が出るようにする
+
+`スキン`タブの画像のところをいじるだけです。
+
+![](../.vuepress/public/imgs/beatoraja6.png)
+
+
+### 判定調整をする
+
+これはプレイしながら調整してください。
+
+`プレイオプション`タブの`判定タイミング`のところで調整できます。
+
+![](../.vuepress/public/imgs/beatoraja7.png)
+
+
+## 起動！
+
+あとは`楽曲読み込み`ボタンを押して10秒くらい待ち、`楽曲全更新`ボタンを押してまた5秒待ち、`起動`ボタンを押すと起動するはずです。
+
+楽曲プレビューはデフォルトで切ってあるので、音がなっていない状態で問題ありません。
+
+![](../.vuepress/public/imgs/beatoraja8.png)
+
+
+## 専コンのコンフィグ
+
+上の画像の状態で、キーボードの`6`を押すとコンフィグ画面が出てきます。
+
+その次にキーボードの`2`を押すと専コンとつながるようになります。
+
+デフォルトだと`5 keys`になっているので、キーボードの`→`を押して`7 keys`に変更してから設定してください。
+
+![](../.vuepress/public/imgs/beatoraja9.png)
+![](../.vuepress/public/imgs/beatoraja10.png)
+![](../.vuepress/public/imgs/beatoraja11.png)
+
+キーボードの`esc`を押すと元の画面にもどれ、専コンが使えるようになっているはずです。
+
+
+## 設定完了！
+
+これですべての設定が終わりました。
+
+楽しいbeatorajaライフを！
+
+
+## 参考文献
+
+- https://www.gaftalk.com/2020/03/22/beatoraja-ubuntu/#_1-ubuntu-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B
