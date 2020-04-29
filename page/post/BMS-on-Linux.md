@@ -10,6 +10,12 @@ tag:
   - BMS
 ---
 
+
+## はじめに
+
+beatorajaのインストールと設定方法は[こちら](https://students-tech.blog/post/beatoraja-on-Linux)です。
+
+
 ## TL;DR
 
 1. joystickでボタンレイアウトを確認

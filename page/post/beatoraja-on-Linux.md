@@ -80,7 +80,7 @@ $ unrar x [GENOCIDEファイル]
 
 # example
 $ cd ~/ダウンロード
-$ unrar x GENOSIDE2018_SP.rar
+$ unrar x GENOCIDE2018_SP.rar
 ```
 
 そうすると`[package]`みたいなフォルダが生成されると思います。
