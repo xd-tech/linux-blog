@@ -19,7 +19,7 @@ tag:
 
 ## 動作確認環境
 
-- Ubuntu 19.10
+- Ubuntu 20.04
 - PS2toUSBコンバータ ( JC-PS101USV )
 - PS2公式IIDXコントローラ ( 専コン )
 
