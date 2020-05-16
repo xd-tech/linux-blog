@@ -31,7 +31,7 @@ MacにはXcodeをインストールすると、自動的にデフォルトのコ
 ```bash
 # アップデート
 $ brew update
-$ brew upgradeupdate
+$ brew upgrade
 # インストール
 $ brew install llvm
 ```
