@@ -52,7 +52,7 @@ beatorajaのインストールと設定方法は[こちら](https://students-tec
 ```
 $ sudo apt update
 $ sudo apt upgrade
-$ sudo apt isntall joystick jstest-gtk qjoypad
+$ sudo apt install joystick jstest-gtk qjoypad
 ```
 
 ## キーバンドの確認
