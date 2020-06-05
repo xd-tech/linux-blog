@@ -8,7 +8,7 @@ tag:
 - python
 - dev
 ---
-# PythonのPoetryを使った最強開発環境(2020)
+# Poetryを使った最強Python開発環境(2020)
 
 ## Python開発環境について
 
