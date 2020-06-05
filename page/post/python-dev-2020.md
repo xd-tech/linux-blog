@@ -118,9 +118,6 @@ $ python script.py
 ### 完成
 このようにプロジェクトを作れます。
 
-## Pyenv
-ここで更にPyenvを使うことで、多数のPythonバージョンに対応させることができます。古いバージョンのpythonを使わないといけない場合等に重宝します。
-
 ## 応用
 ### vscode対応
 このままだとvscode対応が甘いので、次のようにconfigを変更しプロジェクトのディレクトリに`.venv`というディレクトリを作りそこで仮想環境を管理するようにします。
@@ -128,6 +125,8 @@ $ python script.py
 $ poetry config virtualenvs.in-project true
 ```
 ### pyenv
+ここで更にPyenvを使うことで、多数のPythonバージョンに対応させることができます。古いバージョンのpythonを使わないといけない場合等に重宝します。
+
 pyenvを予めインストールしておき、プロジェクトのディレクトリで
 ```bash
 $ pyenv local 3.6.10
