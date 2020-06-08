@@ -53,10 +53,19 @@ https://github.com/python-poetry/poetry
 
 ### Poetryインストール
 次のようにインストールします。
+
+Mac、Linuxならターミナルで
 ```bash
 $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 ```
-この一行だけです簡単ですね。
+
+WindowsならPower Shellで
+```bash
+$ (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python
+```
+
+とラーミナルに打ち込んで**再起動します**。
+これだけです簡単ですね。
 
 ### 新しいプロジェクトを立ち上げる
 プロジェクトを作りたい場所にターミナルで行き、
