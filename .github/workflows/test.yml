@@ -1,0 +1,27 @@
+name: tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  check_markdown:
+    name: Check Markdown files
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout 
+      uses: actions/checkout@v2
+
+    - name: setup node
+      uses: actions/setup-node@v2-beta
+
+    - name: install modules
+      run: npm ci
+
+    - name: check markdown files
+      run: node test/frontmatter-check.js
+
+   
