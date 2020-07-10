@@ -3,7 +3,7 @@ title: xbacklightに代わるものとは...?
 description: i3wmにはybacklightで画面輝度を変えてみよう
 category: linux
 author: AstPy_ms
-date: 2019-2-30
+date: 2019-02-30
 tag:
 - Ubuntu
 - i3wm

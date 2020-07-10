@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import moment from "moment"
+
 export default {
   computed: {
     posts() {
@@ -26,9 +28,9 @@ export default {
         )
         .sort(
           (a, b) => {
-            let adate = a.frontmatter.date || "2019-1-1"
-            let bdate = b.frontmatter.date || "2018-1-1"
-            return new Date(bdate) - new Date(adate)
+            let adate = a.frontmatter.date || "2019-01-01"
+            let bdate = b.frontmatter.date || "2019-01-01"
+            return moment(bdate,"YYYY-MM-DD") - moment(adate,"YYYY-MM-DD")
           }
         );
     }
