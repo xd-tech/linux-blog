@@ -18,6 +18,9 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v2-beta
 
+    - name: install modules
+      run: npm ci
+
     - name: check markdown files
       run: node test/frontmatter-check.js
 
