@@ -52,7 +52,7 @@ $ sudo apt install bellsoft-java11-runtime-full
 
 このままではBMSファイルがないので、有名な**GENOCIDE**という楽曲パックをダウンロードします。
 
-[ここ](https://mocha-repository.info/download.php)から、**GENOSIDE -BMS StarterPackage 2018-** というものを落としてきます。
+[ここ](https://nekokan.dyndns.info/~lobsak/genocide/grade.html)から、**GENOSIDE -BMS StarterPackage 2018-** というものを落としてきます。
 
 ![](../.vuepress/public/imgs/beatoraja1.png)
 
