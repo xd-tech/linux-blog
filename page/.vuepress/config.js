@@ -27,6 +27,19 @@ const google_adsense = () => {
 }
 const domain = "students-tech.blog"
 
+function for_code_plugin(md, ruleName, iteartor) {
+
+    function scan(state) {
+        for (let blkIdx = state.tokens.length - 1; blkIdx >= 0; blkIdx--) {
+            if (state.tokens[blkIdx].type === "fence") {
+                iteartor(state.tokens[blkIdx])
+            }
+        }
+    }
+
+    md.core.ruler.push(ruleName, scan);
+}
+
 module.exports = {
     title: "学生たちの技術ブログ",
     themeConfig: {
@@ -44,10 +57,15 @@ module.exports = {
     },
     markdown: {
         extendMarkdown: md => {
-            md.set({
-                breaks: true,
-                linkify: true,
-            })
+            md
+                .use(for_code_plugin, "replace_code_hinting", (token) => {
+                    token.info = token.info.split(":")[0]
+                    token.info = token.info.replace("terminal", "bash")
+                })
+                .set({
+                    breaks: true,
+                    linkify: true,
+                })
         }
     },
     head: [
