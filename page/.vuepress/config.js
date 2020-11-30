@@ -89,5 +89,10 @@ module.exports = {
         "sitemap": {
             hostname: "https://" + domain
         }
+    },
+    locales: {
+        "/": {
+            lang: "ja_JP"
+        }
     }
 }
