@@ -4,7 +4,7 @@
 
     <Content class="theme-default-content"/>
 
-    <ShareButton />
+    <ShareButton :key="$page" />
 
     <AuthorInfo />
 
