@@ -148,9 +148,13 @@ LaTeXとは論文や本を出版するときに使う文書処理システムで
 
 そこで今回紹介するのが「**[Tectonic][]**」。このソフトを使うと簡単にLaTeXファイルをコンパイルしてくれます。
 
+::: warning
+今回紹介するTectonicですが、現時点では日本語には正式には対応していません。正確にはXeTeXで動いているため、日本語で動作するように作られたものではありません。日本語で正しくLaTeXをコンパイルするためにはpLaTeX等を利用する必要があります。今回の記事で紹介する方法で日本語が入ったドキュメントをコンパイルできますがなにか問題が起きた場合はXeTeX周りな可能性もあります。
+:::
+
 ### Tectonicのインストール
 
-MacユーザーはHome breqをインストールしてから、
+MacユーザーはHome brewをインストールしてから、
 
 ```bash
 $ brew install tectonic
@@ -159,7 +163,17 @@ $ brew install tectonic
 WindowsユーザーはGithubからバイナリをダウンロードしてパスを通しておきましょう。
 https://github.com/tectonic-typesetting/tectonic/releases
 
-Linuxユーザーはバイナリをダウンロードしてもいいですし、ソースからコンパイルしてもいいですし、AURからインストールしてもいいですし、まあ公式サイトやGithubを見ればすぐインストールできるでしょう。
+Linuxユーザーはバイナリをダウンロードしてもいいですし、ソースからコンパイルしてもいいですし、AURからインストールしてもいいですし、まあ公式サイトやGithubを見ればすぐインストールできるでしょう。Ubuntuでは今回の例で使うIPAフォントがインストールされていない可能性があるので次のパッケージをインストールしておきましょう。他のLinuxでも似たようなパッケージがあるはずです。
+
+```bash
+$ sudo apt install fonts-ipafont
+```
+
+[Tectonic][]はRustで作られているので、Cargoを使ってインストールすることもできます。
+
+```bash
+$ cargo install tectonic
+```
 
 このページも参考にしてみてください。
 https://tectonic-typesetting.github.io/en-US/install.html
@@ -192,6 +206,6 @@ note: downloading fonttext.ltx
 コンパイルされて完成したPDFファイルは`sample.pdf`という名前で同じディレクトリに保存されています。
 
 ## まとめ
-初めてLaTeXを使って見る人にとっては良い入門に、今までにLaTeXの環境を構築したことがある人がいればこのツールの良さが伝わってくれれば幸いです。LaTeXは書くのになれがいりますが、かけるようになると書式を意識することなく文章に集中するだけで勝手にきれいな書式に整形してくれるとても良いソフトだと思うのでぜひ使ってみてください。もし何か質問や要望があれば私の[ツイッター](https://twitter.com/daniel_program)にでも
+初めてLaTeXを使って見る人にとっては良い入門に、今までにLaTeXの環境を構築したことがある人がいればこのツールの良さが伝わってくれれば幸いです。LaTeXは書くのになれがいりますが、かけるようになると書式を意識することなく文章に集中するだけで勝手にきれいな書式に整形してくれるとても良いソフトだと思うのでぜひ使ってみてください。もし何か質問や要望があれば私の[ツイッター](https://twitter.com/daniel_program)にでも送ってください。
 
 [Tectonic]: https://tectonic-typesetting.github.io/en-US/
