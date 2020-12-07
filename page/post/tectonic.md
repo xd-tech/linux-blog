@@ -148,9 +148,13 @@ LaTeXとは論文や本を出版するときに使う文書処理システムで
 
 そこで今回紹介するのが「**[Tectonic][]**」。このソフトを使うと簡単にLaTeXファイルをコンパイルしてくれます。
 
+::: warn
+今回紹介するTectonicですが、日本語には正式には対応していません。正確にはXeTeXで動いているため、日本語で動作するように作られたものではありません。日本語で正しくLaTeXをコンパイルするためにはpLaTeX等を利用する必要があります。今回の記事で紹介する方法で日本語が入ったドキュメントをコンパイルできますがなにか問題が起きた場合はXeTeX周りな可能性もあります。
+:::
+
 ### Tectonicのインストール
 
-MacユーザーはHome breqをインストールしてから、
+MacユーザーはHome brewをインストールしてから、
 
 ```bash
 $ brew install tectonic
@@ -159,7 +163,17 @@ $ brew install tectonic
 WindowsユーザーはGithubからバイナリをダウンロードしてパスを通しておきましょう。
 https://github.com/tectonic-typesetting/tectonic/releases
 
-Linuxユーザーはバイナリをダウンロードしてもいいですし、ソースからコンパイルしてもいいですし、AURからインストールしてもいいですし、まあ公式サイトやGithubを見ればすぐインストールできるでしょう。
+Linuxユーザーはバイナリをダウンロードしてもいいですし、ソースからコンパイルしてもいいですし、AURからインストールしてもいいですし、まあ公式サイトやGithubを見ればすぐインストールできるでしょう。Ubuntuでは今回の例で使うIPAフォントがインストールされていない可能性があるので次のパッケージをインストールしておきましょう。他のLinuxでも似たようなパッケージがあるはずです。
+
+```bash
+$ sudo apt install fonts-ipafont
+```
+
+[Tectonic][]はRustで作られているので、Cargoを使ってインストールすることもできます。
+
+```bash
+$ cargo install tectonic
+```
 
 このページも参考にしてみてください。
 https://tectonic-typesetting.github.io/en-US/install.html
