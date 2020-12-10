@@ -15,7 +15,7 @@
     "commander": "^2",
     "esm": "^3",
     "glob": "^7.1.6",
-    "js-yaml": "^3.14.0",
+    "js-yaml": "^3.14.1",
     "markdown-it": "^11.0.1",
     "markdown-it-front-matter": "^0.2.3",
     "moment": "^2.29.1",
