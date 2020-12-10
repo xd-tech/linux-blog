@@ -154,22 +154,27 @@ LaTeXとは論文や本を出版するときに使う文書処理システムで
 
 ### Tectonicのインストール
 
+#### MacOS
 MacユーザーはHome brewをインストールしてから、
 
 ```bash
 $ brew install tectonic
 ```
 
+#### Windows
 WindowsユーザーはGithubからバイナリをダウンロードしてパスを通しておきましょう。
 https://github.com/tectonic-typesetting/tectonic/releases
 
+#### Linux
 Linuxユーザーはバイナリをダウンロードしてもいいですし、ソースからコンパイルしてもいいですし、AURからインストールしてもいいですし、まあ公式サイトやGithubを見ればすぐインストールできるでしょう。
+
 Ubuntuでは今回の例で使うIPAフォントがインストールされていない可能性があるので次のパッケージをインストールしておきましょう。他のLinuxでも似たようなパッケージがあるはずです。
 
 ```bash
 $ sudo apt install fonts-ipafont
 ```
 
+#### その他
 [Tectonic][]はRustで作られているので、Cargoを使ってインストールすることもできます。
 
 ```bash
