@@ -34,17 +34,13 @@ LaTeXとは論文や本を出版するときに使う文書処理システムで
 
 という手順で作っていきます。
 
-## 早速書いてみたい。
+## 早速書いてみたい
 
 先程の例に出した写真のtexファイルを見てみましょう。このようになっています。(`%`で始まる行はコメント)
 
 ```latex
 % ドキュメントの設定
-\documentclass[a4paper,11pt]{bxjsarticle}
-
-% パッケージのインポート
-\usepackage{zxjatype}
-\usepackage[ipa]{zxjafont}
+\documentclass[a4paper,11pt,xelatex,ja=standard]{bxjsarticle}
 
 % ドキュメントの表紙の設定
 \title{Hello \LaTeX}
@@ -76,23 +72,14 @@ LaTeXとは論文や本を出版するときに使う文書処理システムで
 少し複雑なので噛み砕いて説明します。まず、ドキュメントの設定です。
 
 ```latex
-\documentclass[a4paper,11pt]{bxjsarticle}
+\documentclass[a4paper,11pt,xelatex,ja=standard]{bxjsarticle}
 ```
 
-ここでは、A4サイズで11ptのドキュメントで`bxjsarticle`の形式に従います、と書いてあります。
+ここでは、`bxjsarticle`の形式に従うドキュメントであるということを書いています。オプションとしてA4サイズで11ptであることと、xelatexエンジンを使い、日本語を有効にするように書いています。
 
 ::: tip
-多くの日本のLaTeXファイルは`jsarticle`で書かれていますが、この後で説明する[Tectonic][]というソフトでコンパイルする関係上`jsarticle`は使えません。そこで、`bxjsarticle`を使っていますが、ほとんど大差ないので気にしなくて大丈夫です。
+多くの日本のLaTeXファイルは`jsarticle`で書かれていますが、この後で説明する[Tectonic][]というソフトはxelatexを使いコンパイルする関係上`jsarticle`は使えません。そこで、`bxjsarticle`を使っていますが、ほとんど大差ないので気にしなくて大丈夫です。
 :::
-
-次にパッケージのインポートをします。今回は日本語を使うためにこの２つのパッケージを入れておきます。
-
-```latex
-\usepackage{zxjatype}
-\usepackage[ipa]{zxjafont}
-```
-
-ここまではだいたいテンプレートだと思っていただいても結構です。
 
 次に表紙の設定です。タイトル、著者、日付を設定しています。
 
@@ -168,12 +155,6 @@ https://github.com/tectonic-typesetting/tectonic/releases
 #### Linux
 Linuxユーザーはバイナリをダウンロードしてもいいですし、ソースからコンパイルしてもいいですし、AURからインストールしてもいいですし、まあ公式サイトやGithubを見ればすぐインストールできるでしょう。
 
-Ubuntuでは今回の例で使うIPAフォントがインストールされていない可能性があるので次のパッケージをインストールしておきましょう。他のLinuxでも似たようなパッケージがあるはずです。
-
-```bash
-$ sudo apt install fonts-ipafont
-```
-
 #### その他
 [Tectonic][]はRustで作られているので、Cargoを使ってインストールすることもできます。
 
@@ -205,13 +186,33 @@ note: downloading fonttext.ltx
 ...
 ```
 
-ここから必要なパッケージのダウンロードが始まって、コンパイルは初回は10分ほどかかると思います。しかし、一度必要なパッケージがダウンロードされると2度目のコンパイルは3秒程度で終わるはずです。
+最初にコンパイルしたときは必要なパッケージのダウンロードが始まって、コンパイルは初回は数分ほどかかると思います。しかし、一度必要なパッケージがダウンロードされると2度目のコンパイルはダウンロードする必要がないので早く終わるはずです。
+
+試しにコンパイルが終わった後もう一度コンパイルし直してみましょう。
+
+
+```bash
+$ tectonic sample.tex
+note: this is a BETA release; ask questions and report bugs at https://tectonic.newton.cx/
+Running TeX ...
+Rerunning TeX because "sample.aux" changed ...
+Running xdvipdfmx ...
+Writing `sample.pdf` (18.56 KiB)
+Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
+```
+
+とても早くなったことがわかると思います。
+
+::: tip
+Tectonicはドキュメント内で必要なパッケージを見つけたとき、まずはローカルにキャッシュがないか探しに行き、もし見つからない場合はネットからダウンロードしてきています。そのため初回のコンパイルは遅くなってしまいますが、それ以降は必要なパッケージを増やしても増えた分だけダウンロードするだけなのでかなり早くコンパイルが終わります。
+:::
 
 ### 完成！
 
 コンパイルされて完成したPDFファイルは`sample.pdf`という名前で同じディレクトリに保存されています。
 
 ## まとめ
+
 初めてLaTeXを使って見る人にとっては良い入門に、今までにLaTeXの環境を構築したことがある人がいればこのツールの良さが伝わってくれれば幸いです。LaTeXは書くのになれがいりますが、かけるようになると書式を意識することなく文章に集中するだけで勝手にきれいな書式に整形してくれるとても良いソフトだと思うのでぜひ使ってみてください。もし何か質問や要望があれば私の[ツイッター](https://twitter.com/daniel_program)にでも送ってください。
 
 [Tectonic]: https://tectonic-typesetting.github.io/en-US/
