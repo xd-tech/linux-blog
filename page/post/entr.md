@@ -1,7 +1,7 @@
 ---
 title: 保存するごとにコマンドを実行させたい！
 description: entrコマンドを紹介します
-date: 2021-0108
+date: 2021-01-08
 author: AstPy_ms
 category: automation
 tag:
