@@ -39,7 +39,7 @@ $ echo hello_world.py | entr python3 /_  # /_ にはechoしたファイル名が
 $ ls *.py | entr python3 main.py  # main.pyで複数の別ファイルをimportしてる場合はこれが有効
 
 # 例3 : 複数コマンドを走らせる場合 -> bashやzshなどのシェルスクリプトを利用
-$ echo hello_world.c | entr sh -c "hello_world.c && ./a.out"
+$ echo hello_world.c | entr sh -c "clang hello_world.c && ./a.out"
 ```
 
 先日このサイトで紹介した、素晴らしいLaTeXコンパイラである `tectonic` を使うと
