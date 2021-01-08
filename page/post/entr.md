@@ -30,10 +30,16 @@ tag:
 
 ```bash
 # 文法
-$ echo [実行したいファイルの名前] | entr [実行したいコマンド]
+$ {echoやfindやlsなどのファイル名を表示するコマンド} | entr [実行したいコマンド]
 
-# 例 : 保存されるごとにpython3コマンドが走る
+# 例1 : 保存されるごとにpython3コマンドが走る
 $ echo hello_world.py | entr python3 /_  # /_ にはechoしたファイル名が入ります
+
+# 例2 : 複数のファイルを指定してentrに流す
+$ ls *.py | entr python3 main.py  # main.pyで複数の別ファイルをimportしてる場合はこれが有効
+
+# 例3 : 複数コマンドを走らせる場合 -> bashやzshなどのシェルスクリプトを利用
+$ echo hello_world.c | entr sh -c "hello_world.c && ./a.out"
 ```
 
 先日このサイトで紹介した、素晴らしいLaTeXコンパイラである `tectonic` を使うと
@@ -47,4 +53,4 @@ $ echo sample.tex | entr tectonic /_
 
 ## 最後に
 
-少しずつ無駄を削ぎ落としていきましょう
+少しずつ無駄を削ぎ落としていきましょう!!!
