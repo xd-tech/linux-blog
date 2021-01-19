@@ -58,7 +58,8 @@ module.exports = {
         docsDir: "page",
         editLinks: true,
         editLinkText: "Githubで編集する",
-        lastUpdated: "最終更新日"
+        lastUpdated: "最終更新日",
+        docsBranch: 'main',
     },
     markdown: {
         extendMarkdown: md => {
