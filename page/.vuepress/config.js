@@ -44,16 +44,21 @@ module.exports = {
     title: "学生たちの技術ブログ",
     themeConfig: {
         nav: [{
-                text: "Home",
+                text: "ホーム",
                 link: "/"
             },
             {
-                text: "Posts",
+                text: "投稿一覧",
                 link: "/post/"
             }
         ],
         sidebar: "auto",
-        domain
+        domain,
+        repo: "xd-tech/linux-blog",
+        docsDir: "page",
+        editLinks: true,
+        editLinkText: "Githubで編集する",
+        lastUpdated: "最終更新日"
     },
     markdown: {
         extendMarkdown: md => {
@@ -90,9 +95,5 @@ module.exports = {
             hostname: "https://" + domain
         }
     },
-    locales: {
-        "/": {
-            lang: "ja_JP"
-        }
-    }
+    lang: "ja-JP"
 }
