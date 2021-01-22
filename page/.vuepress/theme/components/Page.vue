@@ -4,9 +4,12 @@
 
     <Content class="theme-default-content"/>
 
-    <ShareButton :key="$page.key" />
+    <div class="page-edit">
+      <ShareButton :key="$page.key" />
 
-    <AuthorInfo />
+      <AuthorInfo />
+    </div>
+    
 
     <footer class="page-edit">
       <div
@@ -249,5 +252,4 @@ function flatten (items, res) {
       font-size .8em
       float none
       text-align left
-
 </style>

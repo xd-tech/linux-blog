@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div class="container">
     <a
       href="https://twitter.com/share?ref_src=twsrc%5Etfw"
       class="twitter-share-button"
@@ -10,7 +10,7 @@
 </template>
 
 <style scoped>
-#container {
-  margin: 0px 20px;
+.container {
+  margin: 0px;
 }
 </style>
