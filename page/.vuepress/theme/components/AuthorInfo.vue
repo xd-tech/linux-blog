@@ -41,7 +41,7 @@ export default {
 .info-container {
   display: flex;
   align-items: center;
-  margin: 20px;
+  margin-top: 20px;
   background-color: rgba(200, 200, 200, 0.5);
   border-radius: 10px;
 }
