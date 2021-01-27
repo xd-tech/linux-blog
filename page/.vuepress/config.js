@@ -76,7 +76,14 @@ module.exports = {
     },
     head: [
         ...google_analytics(),
-        ...google_adsense()
+        ...google_adsense(),
+        ["meta", {
+            charset: "utf-8"
+        }],
+        ["meta", {
+            name: "viewport",
+            content: "width=device-width,initial-scale=1"
+        }]
     ],
     plugins: {
         "seo": {
