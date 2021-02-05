@@ -46,7 +46,7 @@ async function get_frontmatter(content) {
 
 async function frontmatter_check(filename, raw_front_matter) {
     // console.log(filename)
-    const frontmatter = yaml.safeLoad(raw_front_matter)
+    const frontmatter = yaml.load(raw_front_matter)
     // console.log(frontmatter)
 
     // check keys
