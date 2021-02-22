@@ -39,7 +39,7 @@ VSCodeの拡張機能のインストールで`Clang-Tidy`をインストール�
 
 これだけで使えるようになるはずです！
 
-## macでの注意
+### macでの注意
 macではclang-tidyのインストール場所が違うのでプラグインの設定を変える必要があります。
 VSCodeの設定から、`Extensions > clang-tidy > Executable`の中身を、
 
