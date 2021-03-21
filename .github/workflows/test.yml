@@ -23,4 +23,4 @@ jobs:
         run: yarn
 
       - name: check markdown files
-        run: node test/frontmatter-check.js
+        run: node utils/frontmatter-check.js
