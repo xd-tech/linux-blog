@@ -1,7 +1,7 @@
 ---
 title: beatorajaをUbuntuでも楽しもう
 description: Ubuntu上でbeatorajaをプレイできるようになるまでの話をします
-date: 2020-4-18
+date: 2020-04-18
 category: games
 author: Astpy_ms
 tag:

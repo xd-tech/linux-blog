@@ -1,7 +1,7 @@
 ---
 title: pythonのライブラリ"dataset"でデータベースを簡単に触る！
 description: datasetライブラリの紹介・使い方
-date: 2019-8-11
+date: 2019-08-11
 author: pineapplehunter
 ---
 

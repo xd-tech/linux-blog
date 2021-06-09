@@ -1,7 +1,6 @@
 const glob = require("glob");
 const fs = require("fs")
 const yaml = require("js-yaml")
-const moment = require("moment");
 // const assert = require("assert").strict
 
 function assert(condition, message) {
@@ -57,7 +56,7 @@ async function frontmatter_check(filename, raw_front_matter) {
 
     // check date
     // console.log(frontmatter["date"])
-    assert(moment(frontmatter["date"], "YYYY-MM-DD").isValid(), `date is not valid in ${filename}, value was ${frontmatter["date"]}`)
+    assert(typeof frontmatter["date"] === "object", `date is not valid in ${filename}, value was ${frontmatter["date"]}`)
 
     // check author
     const authors = ["astpy_ms", "pineapplehunter"]

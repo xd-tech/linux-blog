@@ -1,7 +1,7 @@
 ---
 title: Gitをつかえるようになるために
 description: 深いことは考えずにGitコマンドを使えるようになろうZE
-date: 2019-5-20
+date: 2019-05-20
 category: git
 author: AstPy_ms
 tag:

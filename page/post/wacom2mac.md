@@ -1,7 +1,7 @@
 ---
 title: Wacomの液タブの色をMacのディスプレイに合わせて変換する話
 description: 思考錯誤して色を調整して最終的に自動化する話
-date: 2020-4-1
+date: 2020-04-01
 category: automation
 author: pineapplehunter
 tag:

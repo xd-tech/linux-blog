@@ -3,7 +3,7 @@ title: 愛と勇気だけが友達さ
 description: Braveというブラウザを紹介します
 category: application
 author: AstPy_ms
-date: 2019-3-10
+date: 2019-03-10
 tag:
 - Ubuntu
 ---

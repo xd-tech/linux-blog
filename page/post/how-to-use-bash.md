@@ -1,7 +1,7 @@
 ---
 title: bashのコマンドを紹介
 description: プログラミングのときに使うbashコマンドを紹介します
-date: 2020-7-11
+date: 2020-07-11
 category: programming
 author: Astpy_ms
 tag:

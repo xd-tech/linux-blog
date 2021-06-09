@@ -11,16 +11,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chalk": "^2",
-    "commander": "^2",
-    "esm": "^3",
-    "glob": "^7.1.6",
-    "js-yaml": "^4.0.0",
-    "markdown-it": "^12.0.4",
+    "@vuepress/core": "^2.0.0-beta.17",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.17",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.17",
+    "@vuepress/plugin-search": "^2.0.0-beta.17",
+    "@vuepress/theme-default": "^2.0.0-beta.17",
+    "@vuepress/utils": "^2.0.0-beta.15",
+    "glob": "^7.1.7",
+    "js-yaml": "^4.1.0",
     "markdown-it-front-matter": "^0.2.3",
-    "moment": "^2.29.1",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-seo": "^0.1.4",
-    "vuepress-plugin-sitemap": "^2.3.1"
+    "vuepress": "^2.0.0-beta.17"
   }
 }

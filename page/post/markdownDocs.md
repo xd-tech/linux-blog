@@ -1,7 +1,7 @@
 ---
 title: Markdownでノートを取ろう！
 description: Markdown,Libreoffice Writer,pandocを使ってノートを取る方法を伝授します。
-date: 2019-6-18
+date: 2019-06-18
 category: other
 author: AstPy_ms
 tag:

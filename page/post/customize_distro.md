@@ -1,7 +1,7 @@
 ---
 title: Linuxは見た目が9割(大嘘)
 description: KDEやXfceなどのインストール方法を紹介します。
-date: 2019-6-2
+date: 2019-06-02
 category: linux
 author: AstPy_ms
 tag:

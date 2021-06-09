@@ -1,7 +1,7 @@
 ---
 title: 簡単に自炊してみたくない？
 description: 献立アプリ「タベリー」を紹介します
-date: 2019-2-14
+date: 2019-02-14
 category: other
 author: AstPy_ms
 tag:
