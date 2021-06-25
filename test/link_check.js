@@ -82,7 +82,7 @@ async function main() {
 
     for (const [key, value] of processed) {
         if (!value.startsWith("OK") && !value.startsWith("about")) {
-            console.error(key + " => " + value)
+            console.error("::warning::" + key + " => " + value)
         }
     }
 }
