@@ -44,6 +44,7 @@ async function main() {
     console.log(filenames)
     console.log(links)
 
+    let check_count = 0
     let processed = new Map()
     while (links.length != 0) {
         let link = links.pop()
@@ -52,38 +53,58 @@ async function main() {
             continue
         }
         console.log("checking: " + link)
+        check_count++;
         if (link.startsWith("/")) {
-            if (filenames.includes(link)) {
-                processed.set(link, "OK")
-            } else if (link.endsWith("/")) {
-                processed.set(link, "OK")
+            if (filenames.includes(link) || link.endsWith("/")) {
+                processed.set(link, {
+                    status: "ok"
+                })
             } else {
-                processed.set(link, "Error: file not found in " + filename)
+                processed.set(link, {
+                    status: "error",
+                    error: "Error: file not found",
+                    filename: filename
+                })
             }
             continue;
         }
         if (link.startsWith("http")) {
             try {
                 await axios.get(link)
-                processed.set(link, "OK")
+                processed.set(link, {
+                    status: "ok"
+                })
             } catch (e) {
-                processed.set(link, e + " in " + filename)
+                processed.set(link, {
+                    status: "error",
+                    error: e,
+                    filename: filename
+                })
             }
             continue;
         }
         if (link.startsWith("about")) {
-            processed.set(link, "about")
+            processed.set(link, {
+                status: "about"
+            })
             continue;
         }
-        processed.set(link, "unknown in " + filename)
+        processed.set(link, {
+            status: "unknown"
+        })
     }
 
-    console.log();
+    console.log()
+    console.log("Successfully checked " + check_count + " links!")
 
     let has_error = false
     for (const [key, value] of processed) {
-        if (!value.startsWith("OK") && !value.startsWith("about")) {
-            console.error("::error::" + key + " => " + value)
+        if (value.status === "error") {
+            console.error("::error file=page" + value.filename.split(".html")[0] + ".md" + "::" + key + " => " + value.error)
+            has_error = true;
+        }
+        if (value.status === "unknown") {
+            console.error("::error::" + key + " Unknown")
             has_error = true;
         }
     }
