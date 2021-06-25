@@ -1,8 +1,10 @@
 name: check markdown
 
 on:
-  - pull_request
-  - push
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   check_markdown:
