@@ -94,13 +94,13 @@ async function main() {
         })
     }
 
-    console.log()
-    console.log("Successfully checked " + check_count + " links!")
+    // console.log()
+    // console.log("Successfully checked " + check_count + " links!")
 
     let has_error = false
     for (const [key, value] of processed) {
         if (value.status === "error") {
-            console.error("::error file=page" + value.filename.split(".html")[0] + ".md,line=1,col=1" + "::" + key + " => " + value.error)
+            console.error("::error file=page" + value.filename.split(".html")[0] + ".md::" + key + " => " + value.error)
             has_error = true;
         }
         if (value.status === "unknown") {
