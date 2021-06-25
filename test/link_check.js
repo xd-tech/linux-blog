@@ -80,10 +80,15 @@ async function main() {
 
     console.log();
 
+    let has_error = false
     for (const [key, value] of processed) {
         if (!value.startsWith("OK") && !value.startsWith("about")) {
-            console.error("::warning::" + key + " => " + value)
+            console.error("::error::" + key + " => " + value)
+            has_error = true;
         }
+    }
+    if (has_error) {
+        process.exit(1)
     }
 }
 
