@@ -60,10 +60,11 @@ async function main() {
                     status: "ok"
                 })
             } else {
+                const md_filename = "page" + filename.split(".html")[0] + ".md"
                 processed.set(link, {
                     status: "error",
                     error: "Error: file not found",
-                    filename: filename
+                    md_filename
                 })
             }
             continue;
@@ -75,10 +76,24 @@ async function main() {
                     status: "ok"
                 })
             } catch (e) {
+                const md_filename = "page" + filename.split(".html")[0] + ".md"
+                const content = fs.readFileSync(md_filename).toString()
+                const lines = content.split("\n")
+                let line = 1;
+                let col = 1;
+                for (let i = 0; i < lines.length; i++) {
+                    if (lines[i].includes(link)) {
+                        line = i + 1;
+                        col = lines[i].indexOf(link) + 1
+                        break;
+                    }
+                }
                 processed.set(link, {
                     status: "error",
                     error: e,
-                    filename: filename
+                    md_filename,
+                    line,
+                    col
                 })
             }
             continue;
@@ -100,7 +115,11 @@ async function main() {
     let has_error = false
     for (const [key, value] of processed) {
         if (value.status === "error") {
-            console.error("::error file=page" + value.filename.split(".html")[0] + ".md::" + key + " => " + value.error)
+            if (value.line && value.col) {
+                console.error(`::error file=${value.md_filename},line=${value.line},col=${value.col}::${key} => ${value.error}`)
+            } else {
+                console.error(`::error file=${value.md_filename}::${key} => ${value.error}`)
+            }
             has_error = true;
         }
         if (value.status === "unknown") {
