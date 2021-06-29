@@ -1,0 +1,31 @@
+name: check links
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    - cron: "0 0 * * 1"
+
+jobs:
+  check_links:
+    name: Check Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: install modules
+        run: yarn
+
+      - name: build page
+        run: yarn build
+
+      - name: check links
+        run: node test/link_check.js
