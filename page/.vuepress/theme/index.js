@@ -34,20 +34,9 @@ module.exports = {
         if (app.pages.every((page) => page.path !== "/")) {
             // create a homepage
             // console.log(pages_sorted_by_new)
-            const top5 = [...take(pages_sorted_by_new, 5)].map(p => `## [${p.title}](${p.path})` + "\n" + `${p.frontmatter.description}` + "\n" +
-                `カテゴリー:**${p.frontmatter.category}** タグ:${p.frontmatter.tag.join(",")}`).join("\n")
+            const top5 = [...take(pages_sorted_by_new, 5)].map(page_index_md).join("\n")
             const homepage = await createPage(app, {
                 path: "/",
-                // set frontmatter
-                //home: true
-                // # navbar: false
-                // # heroImage: /hero.png
-                // heroText: 学生たちの技術ブログ
-                // tagline: 学生たちが様々な技術について語っているブログです
-                // actions:
-                //   - text: 記事一覧
-                //     link: /post/
-                //     type: primary
                 frontmatter: {
                     home: true,
                     heroText: "学生たちの技術ブログ",
@@ -67,8 +56,7 @@ module.exports = {
 
         if (app.pages.every((page) => page.path !== "/post/")) {
             // create a posts page
-            const all_pages = pages_sorted_by_new.map(p => `## [${p.title}](${p.path})` + "\n" + `${p.frontmatter.description}` + "\n" +
-                `カテゴリー:**${p.frontmatter.category}** タグ:${(p.frontmatter.tag||[]).join(",")}`).join("\n")
+            const all_pages = pages_sorted_by_new.map(page_index_md).join("\n")
             const posts_page = await createPage(app, {
                 path: "/post/",
                 // set frontmatter
@@ -84,3 +72,12 @@ module.exports = {
         }
     }
 };
+
+function page_index_md(p) {
+    return `## [${p.title}](${p.path})` + "\n" + `${p.frontmatter.description}` + "\n" +
+        `投稿日:${get_page_date(p)} カテゴリー:**${p.frontmatter.category}** タグ:${(p.frontmatter.tag||[]).join(",")}`
+}
+
+function get_page_date(p) {
+    return `${p.frontmatter.date?.getFullYear()}/${p.frontmatter.date?.getMonth()}/${p.frontmatter.date?.getDate()}`
+}
