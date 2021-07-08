@@ -2,20 +2,30 @@ import { path } from "@vuepress/utils";
 import { createPage, Page, Theme } from "@vuepress/core";
 import { DefaultThemeOptions } from "@vuepress/theme-default";
 
-const my_local_theme: Theme<DefaultThemeOptions> = {
+interface MyLocalThemeOptions extends DefaultThemeOptions {
+}
+
+// テーマの作成
+const my_local_theme: Theme<MyLocalThemeOptions> = {
+  // テーマ名
   name: "vuepress-theme-local",
+  // vuepress2の標準テーマを拡張する
   extends: "@vuepress/theme-default",
+  // ページの最後にAuthorInfoをつけるためのハック
   extendsMarkdown: (md) => {
-    //md.breaks = true;
     const render = md.render;
     md.render = (...args) => {
-      // original content
+      // レンダリングされたHTMLに追記する
       const html = render.call(md, ...args);
       return html + "\n<AuthorInfo />";
     };
   },
+  // AuthorInfoのコンポーネントをページ内で使えるようにロード
   clientAppEnhanceFiles: path.resolve(__dirname, "enhance.ts"),
+  // buildしたときに一度だけ実行される。
+  // この中でホームページ、投稿一覧ページの生成をしている
   async onInitialized(app) {
+    // ページを日付でソート
     const pages_sorted_by_new: Page[] = Array.from(
       app.pages
         .filter((p) => p.title)
@@ -25,18 +35,19 @@ const my_local_theme: Theme<DefaultThemeOptions> = {
           return +bdate - +adate;
         })
     );
-    // if the homepage does not exist
-    if (app.pages.every((page) => page.path !== "/")) {
-      // ホームページの生成
-      // はじめの5つの要素を取る
-      const top5: string = pages_sorted_by_new
-        .slice(0, 5)
-        .map(page_index_md)
-        .join("\n");
+    // ホームページが存在しなかったら生成
+    if (!app.pages.some((page) => page.path === "/")) {
+      // 最近の投稿の生成
+      const top5: string = pages_sorted_by_new // すべてのページ
+        .slice(0, 5) // 5つ取る
+        .map(page_index_md) // markdownに変換
+        .join("\n"); // 接続
+      // ホームページの要素
       const homepage: Page = await createPage(app, {
         path: "/",
         frontmatter: {
           home: true,
+          title: "", //　空に設定しないとページのタイトルが「最近の投稿 | 学生たちの技術ブログ」になってしまう
           heroText: "学生たちの技術ブログ",
           tagline: "学生たちが様々な技術について語っているブログです",
           actions: [
@@ -47,45 +58,52 @@ const my_local_theme: Theme<DefaultThemeOptions> = {
             },
           ],
         },
-        // set markdown content
+        // ページの中身のMarkdown
         content: "# 最近の記事\n" + top5,
       });
-      // add it to `app.pages`
+      // ページの追加
       app.pages.push(homepage);
     }
 
-    if (app.pages.every((page: Page) => page.path !== "/post/")) {
-      // create a posts page
-      const all_pages: string = pages_sorted_by_new
-        .map(page_index_md)
-        .join("\n");
+    // 投稿一覧が存在しなかったら生成
+    if (!app.pages.some((page: Page) => page.path === "/post/")) {
+      // ページの内容の生成
+      const all_pages: string = pages_sorted_by_new // すべてのページ
+        .map(page_index_md) // Markdownの生成
+        .join("\n"); // 接続
+      // 投稿一覧ページの要素
       const posts_page: Page = await createPage(app, {
         path: "/post/",
-        // set frontmatter
         frontmatter: {
           layout: "Layout",
           sidebar: false,
         },
-        // set markdown content
+        // Markdownのコンテンツ
         content: "# 投稿一覧\n" + all_pages,
       });
-      // add it to `app.pages`
+      // ページの追加
       app.pages.push(posts_page);
     }
   },
 };
 
+// ページの情報からMarkdownを生成
 function page_index_md(p: Page): string {
+  // タグ
   const tags: string = (p.frontmatter.tag as string[])?.join(",") ?? "なし";
+  // カテゴリ
   const category: string = (p.frontmatter.category as string) || "なし";
-  const date = get_page_date(p);
+  // 日付
+  const date = format_page_date(p);
+
   return `\
 ## [${p.title}](${p.path})
 ${p.frontmatter.description}
 投稿日:${date} カテゴリー:**${category}** タグ:${tags}`;
 }
 
-function get_page_date(p: Page): string {
+// 日付のフォーマット
+function format_page_date(p: Page): string {
   const date: Date = new Date(p.frontmatter.date || "2018-01-01");
   return `${date.getFullYear()}/${date.getMonth()}/${date.getDate()}`;
 }

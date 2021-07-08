@@ -7,7 +7,7 @@
         <div>
           <span id="bio">{{ info?.bio }}</span>
         </div>
-        <div><a :href="info?.infoPageUrl">more info</a></div>
+        <!-- <div><a :href="info?.infoPageUrl">more info</a></div> -->
       </div>
     </div>
   </div>
@@ -22,18 +22,22 @@ import { usePageFrontmatter } from "@vuepress/client";
 
 export default defineComponent({
   computed: {
+    // 著者情報を表示するか（ホームページや投稿一覧では表示しない）
     show(): boolean {
       return (
         this.authorName !== undefined &&
         this.author_names.includes(this.authorName.toLowerCase())
       );
     },
+    // この記事の著者名
     authorName(): string {
       return this.frontmatter.author as string;
     },
+    // すべての著者情報
     author_names(): string[] {
       return authors.map((x) => x.username.toLowerCase());
     },
+    // 著者の情報
     info(): Author | undefined {
       return authors.find(
         (x: Author) => x.username.toLowerCase() === this.authorName.toLowerCase()
@@ -41,7 +45,9 @@ export default defineComponent({
     },
   },
   setup() {
-    const frontmatter = ref(usePageFrontmatter());
+    // Markdownの上に書いてあるyamlの部分の情報
+    const frontmatter = usePageFrontmatter();
+
     return { frontmatter };
   },
 });
