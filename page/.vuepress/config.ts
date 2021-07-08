@@ -1,4 +1,4 @@
-import { defineUserConfig } from "vuepress";
+import { defineUserConfig, Page } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 import { path } from "@vuepress/utils";
 
@@ -49,14 +49,21 @@ export default defineUserConfig<DefaultThemeOptions>({
     [
       "@vuepress/plugin-search",
       {
-        isSearchable: (page) => page.path !== "/" && page.path !== "/post/",
-        getExtraFields: (page) => [
-          ...new Set([
-            page.frontmatter.category || "nocategory",
-            ...(page.frontmatter.tag ?? []),
-          ]),
-        ],
+        isSearchable: (page:Page) => page.path !== "/" && page.path !== "/post/",
+        getExtraFields: get_page_searchable,
       },
     ],
   ],
 });
+
+function get_page_searchable(p: Page): string[] {
+  return Array.from(new Set([get_page_category(p), ...get_page_tags(p)]));
+}
+
+function get_page_category(p: Page): string {
+  return (p.frontmatter.category as string) ?? "nocategory";
+}
+
+function get_page_tags(p: Page): string[] {
+  return (p.frontmatter.tag as string[]) ?? [];
+}

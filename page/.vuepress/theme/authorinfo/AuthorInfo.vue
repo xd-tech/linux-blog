@@ -1,20 +1,20 @@
 <template lang="html">
   <div>
     <div v-if="show" class="info-container">
-      <img :src="info.pic" alt="profile picture" id="profileimg" />
+      <img :src="info?.pic" alt="profile picture" id="profileimg" />
       <div class="info-texts">
-        <div id="username">{{ info.name }}</div>
+        <div id="username">{{ info?.name }}</div>
         <div>
-          <span id="bio">{{ info.bio }}</span>
+          <span id="bio">{{ info?.bio }}</span>
         </div>
-        <div><a :href="info.infoPageUrl">more info</a></div>
+        <div><a :href="info?.infoPageUrl">more info</a></div>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import AuthorInfos from "../authorinfo";
+import { authors } from "../authorinfo";
 import { Author } from "../authorinfo/author";
 
 import { defineComponent, ref } from "vue";
@@ -22,21 +22,21 @@ import { usePageFrontmatter } from "@vuepress/client";
 
 export default defineComponent({
   computed: {
-    show() {
+    show(): boolean {
       return (
         this.authorName !== undefined &&
-        this.authors.includes(this.authorName.toLowerCase())
+        this.author_names.includes(this.authorName.toLowerCase())
       );
     },
-    authorName() {
-      return this.frontmatter.author;
+    authorName(): string {
+      return this.frontmatter.author as string;
     },
-    authors() {
-      return AuthorInfos.authors.map((x) => x.username.toLowerCase());
+    author_names(): string[] {
+      return authors.map((x) => x.username.toLowerCase());
     },
     info(): Author | undefined {
-      return AuthorInfos.authors.find(
-        (x) => x.username.toLowerCase() === this.authorName.toLowerCase()
+      return authors.find(
+        (x: Author) => x.username.toLowerCase() === this.authorName.toLowerCase()
       );
     },
   },
