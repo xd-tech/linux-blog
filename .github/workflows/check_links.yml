@@ -1,14 +1,16 @@
-name: tests
+name: check links
 
 on:
-  pull_request:
   push:
     branches:
       - main
+  pull_request:
+  schedule:
+    - cron: "0 0 * * 1"
 
 jobs:
-  check_markdown:
-    name: Check Markdown files
+  check_links:
+    name: Check Links
     runs-on: ubuntu-latest
 
     steps:
@@ -17,10 +19,10 @@ jobs:
 
       - uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "16"
 
       - name: install modules
         run: yarn
 
-      - name: check markdown files
-        run: node test/frontmatter-check.js
+      - name: build page
+        run: yarn test:link

@@ -2,8 +2,7 @@ import { path } from "@vuepress/utils";
 import { createPage, Page, Theme } from "@vuepress/core";
 import { DefaultThemeOptions } from "@vuepress/theme-default";
 
-interface MyLocalThemeOptions extends DefaultThemeOptions {
-}
+interface MyLocalThemeOptions extends DefaultThemeOptions {}
 
 // テーマの作成
 const my_local_theme: Theme<MyLocalThemeOptions> = {
@@ -77,6 +76,7 @@ const my_local_theme: Theme<MyLocalThemeOptions> = {
         frontmatter: {
           layout: "Layout",
           sidebar: false,
+          editLink: false,
         },
         // Markdownのコンテンツ
         content: "# 投稿一覧\n" + all_pages,
