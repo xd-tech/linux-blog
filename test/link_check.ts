@@ -117,11 +117,11 @@ async function main() {
     if (value.status === "error") {
       if (value.line && value.col) {
         console.error(
-          `::error file=${value.md_filename},line=${value.line},col=${value.col}::${key} => ${value.error}`
+          `::error file=${value.md_filename},line=${value.line},col=${value.col}::${key} in ${value.md_filename}=>${value.error}`
         );
       } else {
         console.error(
-          `::error file=${value.md_filename}::${key} => ${value.error}`
+          `::error file=${value.md_filename}::${key} in ${value.md_filename} => ${value.error}`
         );
       }
       has_error = true;

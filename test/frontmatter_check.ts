@@ -6,20 +6,29 @@ import md_frontmatter from "markdown-it-front-matter";
 
 function assert(condition: boolean, message: string): void | never {
   if (!condition) {
-    throw "assertion error: " + message;
+    throw "::error::assertion error: " + message;
   }
 }
 
 async function main() {
   const files = await globby("page/post/!(README).md");
 
-  files.forEach(async (file) => {
-    const filename = file;
+  let error = false;
+  for (const filename of files) {
+    console.log("Checking", filename);
     const buf = fs.readFileSync(filename);
     const content = buf.toString();
     const front_matter = await get_frontmatter(content);
-    await frontmatter_check(filename, front_matter);
-  });
+    try {
+      await frontmatter_check(filename, front_matter);
+    } catch (e) {
+      console.error(e);
+      error = true;
+    }
+  }
+  if (error) {
+    process.exit(1);
+  }
 }
 
 async function get_frontmatter(content: string): Promise<string> {
@@ -38,7 +47,7 @@ interface Frontmatter {
 async function frontmatter_check(filename: string, raw_front_matter: string) {
   const frontmatter = yaml.load(raw_front_matter);
   if (!frontmatter || typeof frontmatter !== "object" || frontmatter === null) {
-    throw "frontmatter is not a valid object";
+    throw `::error file=${filename}::frontmatter is not a valid object in ${filename}`;
   }
 
   const fdata: Frontmatter = frontmatter as Frontmatter;
