@@ -16,17 +16,17 @@
     "@types/axios": "^0.14.0",
     "@types/js-yaml": "^4.0.2",
     "@types/jsdom": "^16.2.13",
-    "@vuepress/core": "^2.0.0-beta.17",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.17",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.17",
-    "@vuepress/plugin-search": "^2.0.0-beta.17",
-    "@vuepress/theme-default": "^2.0.0-beta.17",
-    "@vuepress/utils": "^2.0.0-beta.15",
+    "@vuepress/core": "^2.0.0-beta.22",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.22",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.22",
+    "@vuepress/plugin-search": "^2.0.0-beta.22",
+    "@vuepress/theme-default": "^2.0.0-beta.22",
+    "@vuepress/utils": "^2.0.0-beta.21",
     "globby": "^11.0.4",
     "js-yaml": "^4.1.0",
     "jsdom": "^16.6.0",
     "markdown-it-front-matter": "^0.2.3",
     "typescript": "^4.3.5",
-    "vuepress": "^2.0.0-beta.17"
+    "vuepress": "^2.0.0-beta.22"
   }
 }
