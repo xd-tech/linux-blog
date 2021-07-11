@@ -1,7 +1,7 @@
 ---
 title: homeディレクトリの名前を英語にしたいよなぁ...
 description: Ubuntuのhomeディレクトリの名前を英語にしてみましょう
-date: 2019-4-3
+date: 2019-04-03
 category: linux
 author: AstPy_ms
 tag:

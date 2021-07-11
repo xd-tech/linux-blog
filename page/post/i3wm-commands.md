@@ -1,7 +1,7 @@
 ---
 title: i3wmを使いこなすために
 description: i3wmで知っておきたいコマンドたちを紹介します
-date: 2019-2-27
+date: 2019-02-27
 category: linux
 author: AstPy_ms
 tag:

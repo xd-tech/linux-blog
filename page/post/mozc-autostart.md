@@ -1,7 +1,7 @@
 ---
 title: Ubuntuで日本語入力がしたい！
 description: 自動で日本語入力が起動するようにする方法を紹介します。
-date: 2020-1-11
+date: 2020-01-11
 category: linux
 author: AstPy_ms
 tag:

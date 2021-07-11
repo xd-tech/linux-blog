@@ -1,7 +1,7 @@
 ---
 title: nvmでlinuxに気楽にnodejsをインストールする
 description: nvmを使ったnodejsのインストール方法を紹介します
-date: 2019-2-3
+date: 2019-02-03
 category: linux
 author: pineapplehunter
 tag:

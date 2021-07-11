@@ -1,7 +1,7 @@
 ---
 title: 明けましておめでとうございます。
 description: 今年もよろしくお願い致します。
-date: 2020-1-1
+date: 2020-01-01
 category: linux
 author: AstPy_ms
 tag:

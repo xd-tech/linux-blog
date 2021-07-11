@@ -1,7 +1,7 @@
 ---
 title: おや...？寿司打の様子が...？
 description: 寿司打がwebGLに対応した話をします
-date: 2019-3-6
+date: 2019-03-06
 category: application
 author: AstPy_ms
 tag:
