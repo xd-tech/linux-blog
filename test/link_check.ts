@@ -27,14 +27,16 @@ async function main() {
   files.forEach((filename: string) => {
     const buf = fs.readFileSync(filename);
     const content = buf.toString();
-    for (const link of parseLinks(content)) {
+    for (const url of parseLinks(content)) {
       const filename_sliced = filename
         .split("page/.vuepress/dist")[1]
         .split("#")[0];
-      links.push({
-        url: link,
-        filename: filename_sliced,
-      });
+      if (!links.some((link) => link.url == url)) {
+        links.push({
+          url: url,
+          filename: filename_sliced,
+        });
+      }
       filenames.add(filename_sliced);
     }
   });
