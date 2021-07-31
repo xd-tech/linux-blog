@@ -22,7 +22,7 @@
     "@vuepress/plugin-search": "^2.0.0-beta.22",
     "@vuepress/theme-default": "^2.0.0-beta.22",
     "@vuepress/utils": "^2.0.0-beta.21",
-    "globby": "^12.0.0",
+    "globby": "^11.0.4",
     "js-yaml": "^4.1.0",
     "jsdom": "^16.6.0",
     "markdown-it-front-matter": "^0.2.3",
