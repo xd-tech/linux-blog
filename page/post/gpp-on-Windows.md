@@ -1,7 +1,7 @@
 ---
 title: WindowsでC++ファイルを実行するまで
 description: g++のインストールとPowerShellの基礎知識について話します
-date: 2020-5-14
+date: 2020-05-14
 category: programming
 author: Astpy_ms
 tag:

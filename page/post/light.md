@@ -1,7 +1,7 @@
 ---
 title: i3wmで簡単にバックライトを調整する方法（xbacklightではない）
 description: xbacklightがうまく行かないケースがいっぱいあるのでArch Wikiから見つけた`light`を紹介します
-date: 2019-4-30
+date: 2019-04-30
 category: linux
 author: pineapplehunter
 tag:

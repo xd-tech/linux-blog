@@ -1,7 +1,7 @@
 ---
 title: makeを使ってCのコンパイルで楽をしよう！
 description: makeの簡単な使い方を解説します。
-date: 2019-6-27
+date: 2019-06-27
 author: pineapplehunter
 ---
 

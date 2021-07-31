@@ -1,7 +1,7 @@
 ---
 title: おサイフケータイってなんなの？
 description: NFCとFelicaについて簡単に解説します
-date: 2019-5-21
+date: 2019-05-21
 category: other
 author: AstPy_ms
 tag:

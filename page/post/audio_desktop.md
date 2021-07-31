@@ -1,7 +1,7 @@
 ---
 title: スピーカーをつなげたのに音が出ない！？
 description: HDMIやDPから変換したケーブルでディスプレイを繋いだときに音が出ないのを直します。
-date: 2020-1-7
+date: 2020-01-07
 category: linux
 author: AstPy_ms
 tag:
