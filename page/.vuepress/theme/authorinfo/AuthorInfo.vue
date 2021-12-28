@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div>
     <div v-if="show" class="info-container">
       <img :src="info?.pic" alt="profile picture" id="profileimg" />
