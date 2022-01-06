@@ -1,7 +1,7 @@
 ---
 title: ArchでVivadoをインストールするときに気をつけること
 description: インストール時に引っかかることがあるのでメモ
-date: 2021-01-06
+date: 2022-01-06
 category: linux
 author: pineapplehunter
 tag:
