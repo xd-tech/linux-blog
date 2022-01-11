@@ -20,7 +20,7 @@
     "markdown-it-front-matter": "^0.2.3",
     "moment": "^2.29.1",
     "vuepress": "^1.8.2",
-    "vuepress-plugin-seo": "^0.1.4",
+    "vuepress-plugin-seo": "^0.2.0",
     "vuepress-plugin-sitemap": "^2.3.1"
   }
 }
