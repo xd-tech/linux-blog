@@ -16,12 +16,12 @@ Arch LinuxにXilinxのVivadoというFPGAの開発ツールをインストール
 
 インストールする際に**generating installed device list**というメッセージが出て止まってしまうことがあります。
 
-この原因として`libncurses.so.5`が入っていないことがあります。Archではncursesは6なんですよね。なので古いバージョンをインストールする必要があります。
+この原因として`libncurses.so.5`が入っていないことがあります。Archではncursesは6なんですよね。なので古いバージョンをインストールする必要があります。他にもlibcryptの古いバージョンが必要です。
 
 AURで次のパッケージが用意されているのでこちらをインストールしましょう。AURが使えるようにしておきましょう。(私はyayを使っています)
 
 ```sh
-$ sudo pacman -S ncurses5-compat-libs
+$ sudo pacman -S ncurses5-compat-libs libxcrypt-compat
 ```
 
 これでうまくインストールができるはずです。
