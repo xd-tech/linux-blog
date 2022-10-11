@@ -158,9 +158,10 @@ https://github.com/tectonic-typesetting/tectonic/releases
 Linuxユーザーはバイナリをダウンロードしてもいいですし、ソースからコンパイルしてもいいですし、AURからインストールしてもいいですし、まあ公式サイトやGithubを見ればすぐインストールできるでしょう。
 
 #### その他
-[Tectonic][]はRustで作られているので、Cargoを使ってインストールすることもできます。
+[Tectonic][]はRustで作られているので、Cargoを使ってインストールすることもできます。Ubuntuの場合依存関係も含めると、次のようにインストールできました。
 
 ```bash
+$ sudo apt install build-essential pkg-config libssl-dev libicu-dev libgraphite2-dev libfreetype-dev libfontconfig-dev
 $ cargo install tectonic
 ```
 
