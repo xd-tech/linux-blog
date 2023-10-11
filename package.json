@@ -9,8 +9,7 @@
   },
   "scripts": {
     "dev": "vitepress dev page",
-    "build": "NODE_ENV=production vitepress build page --mpa",
-    "build:spa": "NODE_ENV=production vitepress build page",
+    "build": "NODE_ENV=production vitepress build page",
     "preview": "vitepress preview page"
   },
   "type": "module"

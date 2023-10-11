@@ -24,7 +24,7 @@ const sorted_posts = posts
 </script>
 
 <HomeComponent>
-# 最近の記事
+<h1>最近の記事</h1>
 
 <div v-for="p in sorted_posts">
     <a :href="p.url"><h2>{{p.frontmatter.title}}</h2></a>
