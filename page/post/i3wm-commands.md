@@ -67,7 +67,7 @@ tag:
 
 ### 壁紙を設定する
 
-```ruby: ~/.config/i3/config
+```bash
 exec --no-startup-id "feh --bg-scale $HOME/.config/i3/wallpaper.jpg"
 ```
 
@@ -77,7 +77,7 @@ exec --no-startup-id "feh --bg-scale $HOME/.config/i3/wallpaper.jpg"
 
 ### スクリーンショットの設定(Ubuntu)
 
-```ruby: ~/.config/i3/config
+```bash
 bindsym mod1+a exec gnome-screenshot
 bindsym mod1+s exec gnome-screenshot --window
 ```
@@ -88,7 +88,7 @@ bindsym mod1+s exec gnome-screenshot --window
 
 ### Mod+Shift+Eを豪華に
 
-```ruby: ~/.config/i3/config
+```bash
 bindsym $mod+Shift+e exec --no-startup-id \
 "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Shutdown' 'systemctl poweroff' -b 'Reboot' 'systemctl reboot' -b 'Logout' 'i3-msg exit'"
 ```
@@ -98,7 +98,7 @@ bindsym $mod+Shift+e exec --no-startup-id \
 
 ### Mod+dをdmenuからi3-dmenu-desktopに変える
 
-```ruby: ~/.config/i3/config
+```bash
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 ```
 

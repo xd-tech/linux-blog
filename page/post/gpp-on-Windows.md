@@ -109,20 +109,20 @@ PS C:￥Users￥NAME￥Downloads> exit
 画像に従ってやっていきましょう。
 
 インストールしたVSCodeを起動させます。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw1.png)
+![](/imgs/gpp-on-windows/mingw1.png)
 
 VSCodeが立ち上がります。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw2.png)
+![](/imgs/gpp-on-windows/mingw2.png)
 
 新規ファイルを作ります。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw3.png)
+![](/imgs/gpp-on-windows/mingw3.png)
 
 C++ファイルとして保存します。今回は`デスクトップ`に保存しています。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw4.png)
-![](../.vuepress/public/imgs/gpp-on-windows/mingw5.png)
+![](/imgs/gpp-on-windows/mingw4.png)
+![](/imgs/gpp-on-windows/mingw5.png)
 
 C++ファイルとして認識されているか確認します。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw6.png)
+![](/imgs/gpp-on-windows/mingw6.png)
 
 C++を書いていきます。
 今回は下のものをコピペしてしまっても構いません。
@@ -156,23 +156,23 @@ int main(){
 4. やったぜ。
 
 VSCode上でPowerShellを開きます。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw7.png)
-![](../.vuepress/public/imgs/gpp-on-windows/mingw8.png)
+![](/imgs/gpp-on-windows/mingw7.png)
+![](/imgs/gpp-on-windows/mingw8.png)
 
 `test.cpp`を保存した場所へ移動しましょう。今回はデスクトップに保存したので、以下の通りです。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw10.png)
+![](/imgs/gpp-on-windows/mingw10.png)
 
 `test.cpp`があるか確認しておきましょう。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw11.png)
+![](/imgs/gpp-on-windows/mingw11.png)
 
 `g++ ./test.cpp`と打ってコンパイル！！エラーが出なければ成功です。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw12.png)
+![](/imgs/gpp-on-windows/mingw12.png)
 
 `a.exe`が生成されているか確認しましょう。
-![](../.vuepress/public/imgs/gpp-on-windows/mingw13.png)
+![](/imgs/gpp-on-windows/mingw13.png)
 
 `./a.exe`と打って`"Hello World!"`が出れば成功！
-![](../.vuepress/public/imgs/gpp-on-windows/mingw14.png)
+![](/imgs/gpp-on-windows/mingw14.png)
 
 
 ## まとめ

@@ -16,7 +16,7 @@ tag:
 
 LaTeXとは論文や本を出版するときに使う文書処理システムです。**テキストファイル**を少しいじるだけで、次のような美しい書式で文章が書けてしまいます。
 
-![latex render](../.vuepress/public/imgs/tectonic/latex.png)
+![latex render](/imgs/tectonic/latex.png)
 
 かなりきれいじゃないですか？論文や本の出版で使われているのも納得です。
 

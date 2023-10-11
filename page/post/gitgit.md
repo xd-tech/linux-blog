@@ -43,7 +43,7 @@ $ git config --global user.email "youraddress@gmail.com"
 
 ## 「git 使い方」で調べてみると
 
-![](../.vuepress/public/imgs/gitgit1.png)
+![](/imgs/gitgit1.png)
 
 **なるほど。わからん。**
 どんな記事も難しく書かれていて、結局どう使うのかがわからない記事ばかり。
@@ -89,7 +89,7 @@ $ git checkout -b foo
 「アプリ開発をしたいんだけど、他人の邪魔をしたくない...」といった場合や、「俺はmasterブランチよりもいいもの作れるぜ！」といった場合のように、master(大元になるブランチ)以外に新しく枝を作ることができます。
 なんなら、開発したあとにmasterと合体させることもできます。
 
-![](../.vuepress/public/imgs/gitgit2.png)
+![](/imgs/gitgit2.png)
 引用元 : https://qiita.com/oohira/items/827433d4ebcb69b45b7f
 
 この場合は**foo**という名前のブランチが増え、自動でそのブランチに移動します。ただし、この状態ではまだ自分のパソコン内(ローカルレポジトリ)でしか反映されません。

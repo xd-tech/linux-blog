@@ -20,7 +20,7 @@ tag:
 
 matplotlibを使って棒グラフを作っていたときのことです。
 
-![50%](../.vuepress/public/imgs/japanize-matplotlib/1.png)
+![50%](/imgs/japanize-matplotlib/1.png)
 
 **なんだこれは**
 
@@ -49,7 +49,7 @@ import japanize-matpolotlib
 と記述するだけでOKです。
 これを使ってさきほどの棒グラフを生成してみると...
 
-![](../.vuepress/public/imgs/japanize-matplotlib/2.png)
+![](/imgs/japanize-matplotlib/2.png)
 
 **やったぜ。**
 

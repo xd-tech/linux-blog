@@ -15,13 +15,13 @@ tag:
 
 今回は`vim`を使う。
 
-```terminal
+```bash
 sudo apt install vim
 ```
 
 ## i3 Window Managerのインストール
 
-```terminal
+```bash
 sudo apt-get update
 sudo apt-get install i3
 ```
@@ -30,7 +30,7 @@ sudo apt-get install i3
 
 ## fcitx-mozcのインストール
 
-```terminal
+```bash
 cd ~
 sudo apt install fcitx-mozc
 vim .profile
@@ -39,7 +39,7 @@ vim .profile
 vimで`.profile`を開いたら、↓これらを1番下にでも追加する。
 vimのコマンドは[こちら](https://eng-entrance.com/linux-vi-save)
 
-```.config
+```
 export DefaultImModule=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
@@ -47,13 +47,13 @@ export XMODIFIERS="@im=fcitx"
 ```
 また、起動時にmozcが勝手に起動するようにする。  
  
-```./.config/i3
+```
 cd ./.config/i3
 vim config
 ```
 このあとに、どこでもいいので`exec --no-startup-id fcitx`を追加して、**ログアウト**します。再ログインして、
 
-```terminal
+```bash
 fcitx-config-gtk3
 ```
 
@@ -64,19 +64,19 @@ fcitx-config-gtk3
 
 個人的に`gdebi`はよく使うのでおすすめしておく。`dpkg`よりも優秀で、依存関係にあるものをすべて持ってきてくれる。確か、GUIにも対応している。
 
-```ruby:terminal
+```bash
 sudo apt-get install gdebi
 ```
 
 実行の仕方は
 
-```ruby:terminal
+```bash
 sudo gdebi [ダウンロードしてきた.debファイルの名前]
 ```
 
 お好みで、`sl`と`nyancat`もどうぞ。lsではありませんよ。
 
-```ruby:terminal
+```bash
 sudo apt install sl
 sl
 sudo apt install nyancat

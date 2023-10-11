@@ -14,7 +14,7 @@ tag:
 ありますよね？
 WindowsやMacでUSBメモリのところを右クリックしてフォーマット...みたいな
 
-![](../.vuepress/public/imgs/usb1.png)
+![](/imgs/usb1.png)
 
 Ubuntuだとこんな感じの画面です。
 

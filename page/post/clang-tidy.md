@@ -15,9 +15,9 @@ tag:
 C/C++用の静的解析ツール(linter)です。これを使うことによりプログラミングしているときに見逃すような細かいバグを早期に発見することができます。
 
 簡単に言うと、下のようなバグがありそうなコードを
-![no linter](../.vuepress/public/imgs/clang-tidy/nolint.png)
+![no linter](/imgs/clang-tidy/nolint.png)
 下のようにワーニングを出すことができるようになります。
-![with linter](../.vuepress/public/imgs/clang-tidy/lint.png)
+![with linter](/imgs/clang-tidy/lint.png)
 ワーニングを見ると、`s`や`i`の初期化を行っていなかったことや、if文の条件に`==`ではなく`=`を間違えて使ってしまっていたことがわかります。
 
 ## インストール方法
@@ -35,7 +35,7 @@ $ sudo apt install clang-tidy
 ## VSCodeのプラグイン導入
 VSCodeの拡張機能のインストールで`Clang-Tidy`をインストールします。
 
-![clang-tidy plugin](../.vuepress/public/imgs/clang-tidy/plugin.png)
+![clang-tidy plugin](/imgs/clang-tidy/plugin.png)
 
 これだけで使えるようになるはずです！
 
@@ -59,7 +59,7 @@ clang-tidy
 ## Error Lens
 これはオプションですが、Error Lensというプラグインを入れると、更にワーニングやエラーが見やすくなるのでおすすめです。
 
-![Error Lens](../.vuepress/public/imgs/clang-tidy/error-lens.png)
+![Error Lens](/imgs/clang-tidy/error-lens.png)
 
 ## まとめ
 clang-tidyを導入することで今後書くコードの紛失をあげていくことができるようになると思います。これからもよいプログラミングを！

@@ -13,7 +13,7 @@ tag:
 
 i3wm + Ubuntuをつかっているあなた、xbacklightを使ってディスプレイの輝度変更をしたい、またはショートカットキーを作りたいようですね...
 
-```ruby:termial
+```bash
 $ xbacklight -inc 10
 No outputs have backlight property
 ```
@@ -29,7 +29,7 @@ No outputs have backlight property
 
 今回は`vim`,`git`,`build-essential`,`meson`を使います。vimではなく`emacs`でも可です。
 
-```ruby:terminal
+```bash
 sudo apt install vim
 sudo apt install git
 sudo apt-get install meson
@@ -40,7 +40,7 @@ sudo apt-get install build-essential
 
 gitといえばの`git clone`から始めます。今回はホームディレクトリにcloneします。
 
-```ruby:terminal
+```bash
 cd ~
 git clone https://github.com/szekelyszilv/ybacklight
 cd ./ybacklight
@@ -50,7 +50,7 @@ sudo make install
 
 インストールは完了しました。ただ、この`ybacklight`は特定のファイルに権限を与えなければならないので
 
-```ruby:terminal
+```bash
 sudo chmod 666 /sys/class/backlight/intel_backlight/brightness
 ```
 
@@ -61,12 +61,12 @@ sudo chmod 666 /sys/class/backlight/intel_backlight/brightness
 
 `i3wm`の`.config`に書き込んでいきます。
 
-```ruby:terminal
+```bash
 cd ~/.config/i3
 vim config
 ```
 
-```ruby:~/.config/i3/config
+```ruby
 # Screen brightness controls
 bindsym mod1+Shift+u exec ybacklight -inc 3 # Alt+Shift+u
 bindsym mod1+Shift+i exec ybacklight -dec 3 # Alt+Shift+i

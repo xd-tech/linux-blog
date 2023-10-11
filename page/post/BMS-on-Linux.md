@@ -62,7 +62,7 @@ $ sudo apt install joystick jstest-gtk qjoypad
 **QJoyPadはアプリ一覧で起動させると正常に動かない場合がありますので、必ずTerminalで起動させてください。**
 <br>
 
-![](../.vuepress/public/imgs/BMS1.png)
+![](/imgs/BMS1.png)
 
 ```
 $ qjoypad -notray
@@ -71,12 +71,12 @@ $ qjoypad -notray
 
 これらを実行するとこの2つが出てくるので、`joystick`はダブルクリック、`QJoyPad`はシングルクリックしてください。
 
-![](../.vuepress/public/imgs/BMS2.png)
+![](/imgs/BMS2.png)
 <br>
 
 こんなのが出てくればOKです。
 
-![](../.vuepress/public/imgs/BMS3.png)![](../.vuepress/public/imgs/BMS4.png)
+![](/imgs/BMS3.png)![](/imgs/BMS4.png)
 
 
 ## 実際にキーバインドをしていく
@@ -106,8 +106,8 @@ BEMUSEというのは、**ブラウザ上のBMSプレイヤーです。**
 4. Optionsを選択
 5. 左にあるレイアウトのところをクリックしながら専コンを動かしてバインド
 
-![](../.vuepress/public/imgs/BMS5.png)
-![](../.vuepress/public/imgs/BMS6.png)
+![](/imgs/BMS5.png)
+![](/imgs/BMS6.png)
 
 これで完了です。
 

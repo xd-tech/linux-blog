@@ -13,7 +13,7 @@ tag:
 ここでterminalを開く
 ???「$ cd ./Download」
 
-```terminal
+```bash
 bash: cd: ./.Download: そのようなファイルやディレクトリはありません
 ```
 
@@ -23,7 +23,7 @@ bash: cd: ./.Download: そのようなファイルやディレクトリはあり
 
 ## そんなあなたにいいコマンドがあります
 
-```terminal
+```bash
 $ LANG=C xdg-user-dirs-gtk-update
 ```
 

@@ -54,7 +54,7 @@ $ sudo apt install bellsoft-java11-runtime-full
 
 [ここ](https://nekokan.dyndns.info/~lobsak/genocide/grade.html)から、**GENOSIDE -BMS StarterPackage 2018-** というものを落としてきます。
 
-![](../.vuepress/public/imgs/beatoraja1.png)
+![](/imgs/beatoraja1.png)
 
 画像の少し暗くなっているボタンをクリックすると、Google Driveに飛ばされるので、そこでダウンロードをしてください。
 
@@ -98,23 +98,23 @@ $ ./beatoraja-config.command
 
 するとこんなのが出てきます。
 
-![](../.vuepress/public/imgs/beatoraja2.png)
+![](/imgs/beatoraja2.png)
 
 
 ### 楽曲パックを読み込ませる
 
 `リソース`タブの`+`を押して、楽曲パックがある場所を選択し、`開く`ボタンを押します。
 
-![](../.vuepress/public/imgs/beatoraja3.png)
-![](../.vuepress/public/imgs/beatoraja4.png)
-![](../.vuepress/public/imgs/beatoraja5.png)
+![](/imgs/beatoraja3.png)
+![](/imgs/beatoraja4.png)
+![](/imgs/beatoraja5.png)
 
 
 ### FAST / SLOW が出るようにする
 
 `スキン`タブの画像のところをいじるだけです。
 
-![](../.vuepress/public/imgs/beatoraja6.png)
+![](/imgs/beatoraja6.png)
 
 
 ### 判定調整をする
@@ -123,7 +123,7 @@ $ ./beatoraja-config.command
 
 `プレイオプション`タブの`判定タイミング`のところで調整できます。
 
-![](../.vuepress/public/imgs/beatoraja7.png)
+![](/imgs/beatoraja7.png)
 
 
 ## 起動！
@@ -132,7 +132,7 @@ $ ./beatoraja-config.command
 
 楽曲プレビューはデフォルトで切ってあるので、音がなっていない状態で問題ありません。
 
-![](../.vuepress/public/imgs/beatoraja8.png)
+![](/imgs/beatoraja8.png)
 
 
 ## 専コンのコンフィグ
@@ -143,9 +143,9 @@ $ ./beatoraja-config.command
 
 デフォルトだと`5 keys`になっているので、キーボードの`→`を押して`7 keys`に変更してから設定してください。
 
-![](../.vuepress/public/imgs/beatoraja9.png)
-![](../.vuepress/public/imgs/beatoraja10.png)
-![](../.vuepress/public/imgs/beatoraja11.png)
+![](/imgs/beatoraja9.png)
+![](/imgs/beatoraja10.png)
+![](/imgs/beatoraja11.png)
 
 キーボードの`esc`を押すと元の画面にもどれ、専コンが使えるようになっているはずです。
 

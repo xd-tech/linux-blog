@@ -11,7 +11,7 @@ tag:
 
 # Clangのインストール
 ## Clangとは
-![LLVM Logo](../.vuepress/public/imgs/clang-install/DragonMedium.png)
+![LLVM Logo](/imgs/clang-install/DragonMedium.png)
 Clangはコンパイラの一つでC,C++等の言語のコンパイルに使えます。Gccと比較されることが多いツールです。LLVMをバックエンドに動作しています。
 
 ## どうしてClangを使うか

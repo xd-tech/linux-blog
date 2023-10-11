@@ -1,17 +1,19 @@
----
-home: true
-# navbar: false
-# heroImage: /hero.png
-heroText: 学生たちの技術ブログ
-tagline: 学生たちが様々な技術について語っているブログです
-actionText: 記事一覧
-actionLink: /post/
-# features:
-# - title: Simplicity First
-#   details: Minimal setup with markdown-centered project structure helps you focus on writing.
-# - title: Vue-Powered
-#   details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-# - title: Performant
-#   details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-# footer: MIT Licensed | Copyright © 2018-present Evan You
----
+[![Netlify Status](https://api.netlify.com/api/v1/badges/82b06f1b-59f6-4a77-9741-f5983e94ad10/deploy-status)](https://app.netlify.com/sites/students-tech-blog/deploys)
+
+# Linux のブログを書こうかなと思っているところ
+
+## 実行方法
+
+### localhostで実行する
+次のコマンドで依存関係をインストールする
+```bash
+$ bun install
+```
+次のコマンドでdevサーバーをローカルで立ち上げる
+```bash
+$ bun dev
+```
+この状態で`page`に好きな`markdown`を追加して[localhost:8080](http://localhost:8080)にアクセスすればページが反映されてる
+
+### web上にアップロードしてあるサイト
+https://students-tech.blog

@@ -13,7 +13,7 @@ tag:
 大手キャリアショップや格安SIMを販売している店舗に出向いて新しいスマホ買おうかな〜なんて考えているときに、**おサイフケータイ対応**なんてPOPをみたことはありませんか？
 または今、GALAXYやXperiaを使っているよって方もいらっしゃるでしょうか。
 
-![](../.vuepress/public/imgs/felica1.png)
+![](/imgs/felica1.png)
 
 私が利用している[楽天モバイル](https://mobile.rakuten.co.jp/product/spec/)でも上のように対応している商品の絞り込みが可能になっています。
 
@@ -25,7 +25,7 @@ tag:
 
 ## NFCとは
 
-![](../.vuepress/public/imgs/felica2.jpg)
+![](/imgs/felica2.jpg)
 [画像引用元](https://www.sony.co.jp/Products/felica/NFC/)
 
 定義 : 既存の複数の非接触ICカードの通信規格を包含する他、携帯電話やPCなどに搭載されることを前提にして機器間のデータ交換などの用途を想定して規定された技術
@@ -45,9 +45,9 @@ NFCにはいくつかのタイプがあって、NFC-A、NFC-B、NFC-Fなどが�
 "非接触ICカードの国際標準規格ISO／IEC 14443に規定されるType-A， Type-Bの通信技術を、それぞれNFC-A， NFC-B、JIS X 6319-4にもとづくFeliCaの通信技術をNFC-Fと称し、NFCフォーラムでは、NFC-A， NFC-B， NFC-Fの3つの通信技術を等価に扱うグローバルな互換性を実現しうる仕様開発が行われています。 "
 [引用元](https://www.sony.co.jp/Products/felica/NFC/)
 
-![](../.vuepress/public/imgs/felica3.png)
+![](/imgs/felica3.png)
 [画像引用元](https://www.softbank.jp/mobile/service/osaifu-keitai/)
-![](../.vuepress/public/imgs/felica4.png)
+![](/imgs/felica4.png)
 [画像引用元](https://www.felicanetworks.co.jp/contact/brand.html)
 
 上のようなマークがスマートフォンの裏面に書いてある場合、その端末はFelicaに対応しています。
