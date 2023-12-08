@@ -14,7 +14,7 @@ tag:
 
 端的に説明するならば、電車やタクシー、バスなどの公共交通機関を利用するユーザのデータを格納しているデータベースになります。
 
-![](../.vuepress/public/imgs/maasjapan1.jpg)
+![](/imgs/maasjapan1.jpg)
 [引用元](https://japan.cnet.com/article/35137546/)
 
 

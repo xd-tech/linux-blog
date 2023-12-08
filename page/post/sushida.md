@@ -17,7 +17,7 @@ tag:
 ## WebGL版が出たらしいぜ！
 しかしですね皆様。なんと今寿司打がWebGLに対応して帰ってきたんでス！(2019-3-6現在ではまだテスト公開ですが)
 
-![](../.vuepress/public/imgs/sushida.png)
+![](/imgs/sushida.png)
 
 ## YEAHHHHHHH
 寿司打がwebGLに対応したことで**Flashなしで**寿司打をプレイできるようになりました！

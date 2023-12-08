@@ -192,7 +192,7 @@ $ python3 wacom2mac.py 変換したい画像ファイル
 
 Automator を使い次のようなクイックアクションを追加した
 
-![automator screenshot](../.vuepress/public/imgs/wacom2mac/automator.png)
+![automator screenshot](/imgs/wacom2mac/automator.png)
 
 `/path/to/python`,`/path/to/wacom2mac.py`は各自の環境に合わせて置き換えてほしい。
 `/path/to/python`は`$ which python3`の結果を入れればいい。

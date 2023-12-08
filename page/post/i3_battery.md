@@ -62,7 +62,7 @@ LG GRAMでは`battery all`となっていて、こいつが悪さをしている
 
 これを下のように修正します。
 
-```/etc/i3status.conf
+```
 # 修正前
 order += "battery all"
 
@@ -72,7 +72,7 @@ order += "battery 1"
 
 さらにその下の方にも
 
-```/etc/i3status.conf
+```
 battery all {
         format = "%status %percentage %remaining"
 }
@@ -80,7 +80,7 @@ battery all {
 
 となっているところがあるので、これも修正します
 
-```/etc/i3status.conf
+```
 # 修正前
 battery all {
         format = "%status %percentage %remaining"

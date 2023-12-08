@@ -1,10 +1,12 @@
 <template lang="html">
   <div>
     <div v-if="show" class="info-container">
-      <img :src="info.pic" alt="profile picture" id="profileimg">
+      <img :src="info.pic" alt="profile picture" id="profileimg" />
       <div class="info-texts">
-        <div id="username">{{info.name}}</div>
-        <div><span id="bio">{{info.bio}}</span></div>
+        <div id="username">{{ info.name }}</div>
+        <div>
+          <span id="bio">{{ info.bio }}</span>
+        </div>
         <div><a :href="info.infoPageUrl">more info</a></div>
       </div>
     </div>
@@ -12,7 +14,8 @@
 </template>
 
 <script>
-import AuthorInfos from "../../authorinfo";
+import AuthorInfos from "../authorinfo";
+import { useData } from "vitepress";
 
 export default {
   computed: {
@@ -23,17 +26,17 @@ export default {
       );
     },
     authorName() {
-      return this.$page.frontmatter.author;
+      return useData().frontmatter.value.author;
     },
     authors() {
-      return AuthorInfos.authors.map(x => x.username.toLowerCase());
+      return AuthorInfos.authors.map((x) => x.username.toLowerCase());
     },
     info() {
       return AuthorInfos.authors.filter(
-        x => x.username.toLowerCase() === this.authorName.toLowerCase()
+        (x) => x.username.toLowerCase() === this.authorName.toLowerCase()
       )[0];
-    }
-  }
+    },
+  },
 };
 </script>
 

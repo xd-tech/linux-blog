@@ -42,7 +42,7 @@ $ sudo apt install pavucontrol
 $ pavucontrol
 ```
 
-![](../.vuepress/public/imgs/audio1.png)
+![](/imgs/audio1.png)
 
 そうすると上のようなGUIコントロール画面が出てきます。
 

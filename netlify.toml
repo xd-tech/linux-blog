@@ -1,0 +1,4 @@
+[build]
+base = "/"
+publish = "/page/.vitepress/dist"
+command = "bun install && bun run build"
