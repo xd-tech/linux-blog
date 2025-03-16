@@ -1,32 +1,32 @@
-import { defineConfig } from "vitepress";
+import { defineConfig, HeadConfig } from "vitepress";
 
-const google_analytics = () => {
+const google_analytics: () => HeadConfig[] = () => {
   return [
     [
       "script",
       {
-        async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=275253874",
+        async: "true",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-SBRRP4LRT6",
       },
     ],
     [
       "script",
       {},
       `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', '275253874');`,
+      gtag('config', 'G-SBRRP4LRT6');`,
     ],
-  ];
+  ] satisfies HeadConfig[];
 };
 
-const google_adsense = () => {
+const google_adsense: () => HeadConfig[] = () => {
   return [
     [
       "script",
       {
-        async: true,
+        async: "true",
         src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       },
     ],
@@ -39,9 +39,8 @@ const google_adsense = () => {
           enable_page_level_ads: true
       });`,
     ],
-  ];
+  ] satisfies HeadConfig[];
 };
-const domain = "students-tech.blog";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
