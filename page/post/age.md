@@ -100,7 +100,7 @@ https://age-encryption.org/v1
 スペックに準拠していれば他のプログラムからage互換のファイルが読み書きできますね！
 
 ### Goのライブラリとしてのage
-ageのスペック準拠のプログラムが書きやすいということですね。(Goのライブラリ)[https://pkg.go.dev/filippo.io/age]として使うこともできますし、(Rustのライブラリ)[https://crates.io/crates/age]も作られているようですね
+ageのスペック準拠のプログラムが書きやすいということですね。[Goのライブラリ](https://pkg.go.dev/filippo.io/age)として使うこともできますし、[Rustのライブラリ](https://crates.io/crates/age)も作られているようですね
 
 ### 小さく明示的な鍵が使われている
 ageで使える鍵は2種類あります。
