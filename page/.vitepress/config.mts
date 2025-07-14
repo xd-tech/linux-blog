@@ -1,4 +1,5 @@
 import { defineConfig, HeadConfig } from "vitepress";
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 const google_analytics: () => HeadConfig[] = () => {
   return [
@@ -43,7 +44,7 @@ const google_adsense: () => HeadConfig[] = () => {
 };
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   title: "学生たちの技術ブログ",
   description: "学生たちが技術について話しています",
   lastUpdated: true,
@@ -81,4 +82,7 @@ export default defineConfig({
       pattern: "https://github.com/xd-tech/linux-blog/edit/main/page/:path",
     },
   },
+  mermaidPlugin: {
+    class: "mermaid"
+  }
 });
