@@ -46,7 +46,7 @@ sequenceDiagram
 
 - 送りたいファイルは`hello.txt`
 - 暗号化されたファイルは`hello.age`に保存
-- ファイルを送りたい相手または自分ののSSH公開鍵が次の鍵であるとして、recepients.txtに保管している(相手がGithubユーザーの場合`github.com/*username*.keys`で鍵が分かる)
+- ファイルを送りたい相手または自分のSSH公開鍵が次のようにrecepients.txtファイルに書き込まれている(相手がGithubユーザーの場合`github.com/*username*.keys`で鍵が分かる)
 
 ```
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM/QhUXk6LPpFd97zUow1bHkkF1CvRAjCG1iIfg5BBhd
@@ -104,13 +104,16 @@ ageのスペック準拠のプログラムが書きやすいということで�
 
 ### 小さく明示的な鍵が使われている
 ageで使える鍵は2種類あります。
+どちらかの方法で鍵ペアを作成し公開鍵を事前に相手に渡しておく必要があります。
 
-- ageで生成した鍵ペア
 - ssh鍵ペア(ssh-rsa, ssh-ed25519)
+- ageで生成した鍵ペア
 
 ssh鍵の使い勝手が良いのでそれを使うケースが多そうですね。
 GitHubをSSHで利用している人は`github.com/アカウント名.key`でSSHの公開鍵をすべて確認できるので事前にもらっておく手間も省けますね。
 ちなみに私の公開鍵は https://github.com/pineapplehunter.keys で見れます
+
+#### SSH鍵の生成
 
 鍵の生成についてはSSHの場合はつぎのコマンドでできます(ed25519がオススメ)
 
@@ -118,6 +121,8 @@ GitHubをSSHで利用している人は`github.com/アカウント名.key`でSSH
 $ ssh-keygen
 ```
 生成された鍵ペアの`.pub`がついている方を公開して暗号化してもらい、拡張子のついていない方で復号化します。
+
+#### age鍵の生成
 
 ageの鍵ペアの生成は次のコマンドでできます
 
