@@ -41,7 +41,7 @@ sequenceDiagram
     Note over B: hello.txtを受信できた！
 ```
 
-### ファイルの暗号化**
+### ファイルの暗号化
 **前提**
 
 - 送りたいファイルは`hello.txt`
