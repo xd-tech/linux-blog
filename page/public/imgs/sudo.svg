@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="700"
-   height="250"
-   viewBox="0 0 700 250"
+   width="676.33411"
+   height="213.82228"
+   viewBox="0 0 676.33411 213.82228"
    version="1.1"
    id="svg1"
    inkscape:export-filename="sudo.png"
@@ -30,14 +30,14 @@
      inkscape:document-units="px"
      inkscape:export-bgcolor="#ffffff00"
      inkscape:zoom="1.4061729"
-     inkscape:cx="267.39244"
-     inkscape:cy="102.05004"
-     inkscape:window-width="1959"
-     inkscape:window-height="1134"
+     inkscape:cx="254.59174"
+     inkscape:cy="84.982437"
+     inkscape:window-width="2192"
+     inkscape:window-height="1208"
      inkscape:window-x="26"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg1"
+     inkscape:current-layer="layer1"
      showborder="true"
      labelstyle="default"
      inkscape:antialias-rendering="true"
@@ -45,8 +45,8 @@
     <inkscape:page
        x="0"
        y="0"
-       width="700"
-       height="250"
+       width="676.33411"
+       height="213.82228"
        id="page2"
        margin="0"
        bleed="0" />
@@ -54,23 +54,23 @@
   <defs
      id="defs1" />
   <rect
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.909051"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.909051"
      id="rect8"
      width="676.33411"
      height="213.82228"
-     x="13.044077"
-     y="17.022127" />
+     x="0"
+     y="0" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-82.366142,-63.112609)">
+     transform="translate(-95.410219,-80.134736)">
     <g
        id="g12"
        transform="translate(17.778753,9.0758353)">
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          x="83.012627"
          y="119.35886"
          id="text3"><tspan
@@ -80,7 +80,7 @@
            y="119.35886">root</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          x="81.846611"
          y="246.97055"
          id="text3-1"><tspan
@@ -92,10 +92,10 @@
     <g
        id="g11"
        transform="translate(17.778753,9.0758353)"
-       style="stroke:none;fill:#000000;fill-opacity:1">
+       style="fill:#000000;fill-opacity:1;stroke:none">
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          x="152.42836"
          y="274.51959"
          id="text5"><tspan
@@ -105,7 +105,7 @@
            y="274.51959">user shell</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          x="289.3461"
          y="274.51959"
          id="text6"><tspan
@@ -115,7 +115,7 @@
            y="274.51959">call &quot;sudo&quot;</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          x="435.10068"
          y="274.51959"
          id="text7"><tspan
@@ -125,7 +125,7 @@
            y="274.51959">enter password</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          x="600.41034"
          y="274.17389"
          id="text9"><tspan
@@ -168,7 +168,7 @@
          id="path10-1" />
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          x="649.78851"
          y="96.485077"
          id="text10"><tspan
@@ -178,7 +178,7 @@
            y="96.485077">Actual path</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          x="649.78851"
          y="72.729797"
          id="text10-0"><tspan
