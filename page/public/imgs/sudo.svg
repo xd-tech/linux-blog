@@ -2,18 +2,22 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="664.74756"
-   height="214.40308"
-   viewBox="0 0 664.74756 214.40308"
+   width="700"
+   height="250"
+   viewBox="0 0 700 250"
    version="1.1"
    id="svg1"
-   inkscape:export-filename="sudo.svg"
+   inkscape:export-filename="sudo.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
+   sodipodi:docname="sudo.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#">
   <sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -21,31 +25,52 @@
      borderopacity="0.25"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
+     inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:export-bgcolor="#ffffffff">
+     inkscape:export-bgcolor="#ffffff00"
+     inkscape:zoom="1.4061729"
+     inkscape:cx="267.39244"
+     inkscape:cy="102.05004"
+     inkscape:window-width="1959"
+     inkscape:window-height="1134"
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1"
+     showborder="true"
+     labelstyle="default"
+     inkscape:antialias-rendering="true"
+     inkscape:clip-to-page="false">
     <inkscape:page
        x="0"
        y="0"
-       width="664.74756"
-       height="214.40308"
+       width="700"
+       height="250"
        id="page2"
        margin="0"
        bleed="0" />
   </sodipodi:namedview>
   <defs
      id="defs1" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.909051"
+     id="rect8"
+     width="676.33411"
+     height="213.82228"
+     x="13.044077"
+     y="17.022127" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-82.366142,-63.112609)">
     <g
-       id="g12">
+       id="g12"
+       transform="translate(17.778753,9.0758353)">
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ff0000;stroke:#000000;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
          x="83.012627"
          y="119.35886"
          id="text3"><tspan
@@ -55,7 +80,7 @@
            y="119.35886">root</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ff0000;stroke:#000000;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
          x="81.846611"
          y="246.97055"
          id="text3-1"><tspan
@@ -65,10 +90,12 @@
            id="tspan4">user</tspan></text>
     </g>
     <g
-       id="g11">
+       id="g11"
+       transform="translate(17.778753,9.0758353)"
+       style="stroke:none;fill:#000000;fill-opacity:1">
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ff0000;stroke:#000000;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
          x="152.42836"
          y="274.51959"
          id="text5"><tspan
@@ -78,7 +105,7 @@
            y="274.51959">user shell</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ff0000;stroke:#000000;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
          x="289.3461"
          y="274.51959"
          id="text6"><tspan
@@ -88,7 +115,7 @@
            y="274.51959">call &quot;sudo&quot;</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ff0000;stroke:#000000;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
          x="435.10068"
          y="274.51959"
          id="text7"><tspan
@@ -98,7 +125,7 @@
            y="274.51959">enter password</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ff0000;stroke:#000000;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
          x="600.41034"
          y="274.17389"
          id="text9"><tspan
@@ -108,7 +135,8 @@
            y="274.17389">root program</tspan></text>
     </g>
     <g
-       id="g13">
+       id="g13"
+       transform="translate(17.778753,9.0758353)">
       <path
          style="fill:#ff0000;stroke:#000000;stroke-dasharray:2, 1;stroke-dashoffset:0;stroke-opacity:1"
          d="M 124.51895,244.19516 H 747.11369"
@@ -128,7 +156,8 @@
          id="path9" />
     </g>
     <g
-       id="g10">
+       id="g10"
+       transform="translate(12.089552,20.027739)">
       <path
          style="fill:none;stroke:#0021af;stroke-width:3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          d="m 617.58536,69.163145 h 25.04692"
@@ -139,7 +168,7 @@
          id="path10-1" />
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
          x="649.78851"
          y="96.485077"
          id="text10"><tspan
@@ -149,7 +178,7 @@
            y="96.485077">Actual path</tspan></text>
       <text
          xml:space="preserve"
-         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
          x="649.78851"
          y="72.729797"
          id="text10-0"><tspan
@@ -159,4 +188,27 @@
            y="72.729797">What I thought</tspan></text>
     </g>
   </g>
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
 </svg>
