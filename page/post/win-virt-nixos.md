@@ -15,9 +15,9 @@ tag:
 Linuxは近年の多くの開発者によってかなり快適に使えるようになりましたが、いくつか重要なソフトウェアが使えないのが現状です。
 特に**Microsoft Office**や**Photoshop**は欲しい方が多いのではないでしょうか。
 
-その問題を解決するために、**Linux上の仮想マシンでWindowsを動かす**方法があります。Linuxでは様々な仮想マシンを立ち上げる技術が定着していますが、実はWindowsを動かすう場合は少し厄介な点があります。**UEFI**と**TPM**が必須であるという点です。
+その問題を解決するために、**Linux上の仮想マシンでWindowsを動かす**方法があります。Linuxでは様々な仮想マシンを立ち上げる技術が定着していますが、実はWindowsを動かす場合は少し厄介な点があります。**UEFI**と**TPM**が必須であるという点です。
 
-この記事ではある程度直感的にWindowsを立ち上げるまでの仮定について説明します。
+この記事ではある程度直感的にWindowsを立ち上げるまでの手順について説明します。
 今回はLinuxの中でもNixOSをベースに説明していきます。
 段階的に必要なものを紹介したあとに必要なコードの全体を乗せておきます。
 
@@ -28,7 +28,7 @@ Linuxは近年の多くの開発者によってかなり快適に使えるよう
 
 ### libvirtとvirt-manager
 仮想環境を立ち上げるには複数のやり方がありますが、この記事ではlibvirtとvirt-managerを使ったやり方について解説します。
-libvirtはqemuをバックエンドとして動作する仮想マシンで、virt-managerはlibvirtを操作するためのGUI画面です。
+libvirtはqemuをバックエンドとして動作する仮想化プラットフォームで、virt-managerはlibvirtを操作するためのGUI画面です。
 KVMが有効化されているPCでは自動でKVMが活用されます。
 
 ![仮想マシンの概要](/imgs/win-virt-nixos/libvirt.drawio.svg)
@@ -58,7 +58,7 @@ https://wiki.nixos.org/wiki/Virt-manager
 [swtpm]: https://github.com/stefanberger/swtpm
 
 ### ネットワーク設定
-デフォルトではvirt-managerのネットワークはFirewallによってブロックされてしまいます。そこで次の億ションを有効化してネットワークの制限を解除します。
+デフォルトではvirt-managerのネットワークはFirewallによってブロックされてしまいます。そこで次のオプションを有効化してネットワークの制限を解除します。
 
 ```nix
 {
@@ -122,7 +122,7 @@ https://www.microsoft.com/en-us/software-download/windows11
 4. 適当なディスクサイズを選んで進む
 5. **Customize configuration before install**にチェックを入れて進む
 
-ここで浮く柄設定が正しく反映されていることを確認します。
+ここで設定が正しく反映されていることを確認します。
 
 ### UEFI設定
 Windowsを起動するためにはUEFIが必要になります。概要画面から正しく選択されていることを確認しましょう。
@@ -131,7 +131,7 @@ Windowsを起動するためにはUEFIが必要になります。概要画面か
 
 ### CPU設定
 libvirtではデフォルトでCPUのコアがそれぞれ別のソケットに接続されているとしてトポロジーが構成されています。
-Linuxの場合問題ないのですがWindowsでは正しく認識しないのでマニュアルで設定してSocketsの内容をCoresに移しましょう。
+Linuxの場合問題ないのですがWindowsでは正しく認識しないので手動で設定してSocketsの内容をCoresに移しましょう。
 
 
 ![CPUの設定](/imgs/win-virt-nixos/cpu.png)
@@ -154,7 +154,7 @@ Linuxの場合問題ないのですがWindowsでは正しく認識しないの�
 手順としてネットワークを切断したい場合、virt-managerのNICのLink stateを切った状態で起動することでネットワークがないように認識させることができます。
 
 ### ゲストドライバのインストール
-こちらのウェブサイトの`Guest → Windows binaries`の文中にある`spice-guest-tools`をダウンロードしてインストルします。
+こちらのウェブサイトの`Guest → Windows binaries`の文中にある`spice-guest-tools`をダウンロードしてインストールします。
 ディスプレイドライバが設定されることでウインドウのリサイズに応じてディスプレイのサイズ変更をしてくれるようになります。
 
 https://www.spice-space.org/download.html
