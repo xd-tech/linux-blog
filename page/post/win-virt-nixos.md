@@ -127,25 +127,25 @@ https://www.microsoft.com/en-us/software-download/windows11
 ### UEFI設定
 Windowsを起動するためにはUEFIが必要になります。概要画面から正しく選択されていることを確認しましょう。
 
-![UEFIの設定](/imgs/win-virt-nixos/uefi.png)
+![UEFIの設定](/imgs/win-virt-nixos/uefi.webp)
 
 ### CPU設定
 libvirtではデフォルトでCPUのコアがそれぞれ別のソケットに接続されているとしてトポロジーが構成されています。
 Linuxの場合問題ないのですがWindowsでは正しく認識しないので手動で設定してSocketsの内容をCoresに移しましょう。
 
 
-![CPUの設定](/imgs/win-virt-nixos/cpu.png)
+![CPUの設定](/imgs/win-virt-nixos/cpu.webp)
 
 ### TPM設定
 最後に起動に必要なTPMの設定をしておきましょう。
 どの種類でも起動するかとは思うのですが、モダンなTPM2.0を設定しておくと無難でしょう。
 
-![TPMの設定](/imgs/win-virt-nixos/tpm.png)
+![TPMの設定](/imgs/win-virt-nixos/tpm.webp)
 
 ### 起動と設定
 あとは`Begin installation`を押して進めるだけで設定は完了するはずです。
 
-![インストール完了](/imgs/win-virt-nixos/installed.png)
+![インストール完了](/imgs/win-virt-nixos/installed.webp)
 
 ## インストール後の設定
 ### Microsoftアカウント無しで起動
